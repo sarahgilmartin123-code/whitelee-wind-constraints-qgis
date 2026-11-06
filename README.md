@@ -8,5 +8,5 @@ Constraint mapping for onshore wind at Whitelee, south of Glasgow. Used QGIS to 
 ## Results
 ## Maps
 ## Script
-## Data Sources and Licenses
-## AI use (fair-use statement)
+## Data Sources and Licence
+## AI Use (Fair-Use Statement)
