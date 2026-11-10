@@ -27,6 +27,7 @@ The area is made up of various landscape types with most of it consisting of moo
 | OpenStreetMap | OpenStreetMap contributors | © OpenStreetMap contributors, openstreetmap.org/copyright. | ODbL | Existing turbines and basemap |
 | Landscape Character Assessment | NatureScot (SNH) | © SNH, contains Ordnance Survey data © Crown copyright and database right (2021). Available under the Open Government Licence v3.0. | OGL v3.0 | Landscape types (Study Area description) |
 
+Raw data is not included in the repository and can be downloaded from each provider.
 ## References
 Scottish Government (2022). *Onshore wind: policy statement 2022*. Available at: https://www.gov.scot/publications/onshore-wind-policy-statement-2022/ (Accessed: 8 November 2026).  
 
