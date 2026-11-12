@@ -11,6 +11,18 @@ The study area is centred approximately 22 km south of Glasgow city centre, cove
 
 The area is made up of various landscape types with most of it consisting of moorland (62.59%); the rest is a mixture of farmland, river valleys and some urban areas. These groups were derived from NatureScot's Landscape Character Types (Scottish Natural Heritage, 2019). 
 ## Methods
+Open data was combined in QGIS to create a locational constraint layer to identify constraint-free land. PyQGIS measured the constraint-free areas and obtained summary statistics.  
+
+## 1. Software and coordinate reference system 
+- Software: QGIS 3.44.15 and PyQGIS.
+- CRS: EPSG:27700 - OSGB36 / British National Grid
+- CRS: EPSG:27700 - 0SGB36/ British National Grid. Used by these layers: roads, buildings, water, woodland, peat, protected area, DTM and all subsequent layers created from them. 
+- Basemap: ESPG:3857 WGS 84 / Pseudo-Mercator (used for display purposes).
+- Existing turbines: Originally in EPSG:4326 - WGS 84. The turbines were reprojected to EPSG:27700 to match the other layers. 
+- British National Grid is the standard grid for Great Britain and the OS and NatureScot data were already supplied in it. 
+- A metre-based CRS was essential for creating buffer distances and area calculations. 
+
+
 ## Results
 ## Maps
 ## Script
