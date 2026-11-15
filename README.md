@@ -25,14 +25,14 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 
 | Dataset | Clipped to (tool) | Other preparation |
 |---|---|---|
-| Study Area | Easting 246,000 - 266,000, Northing 634,000 - 654,000  | Buffered layer to create new 1km buffer boundary surrounding the study area to avoid edge effects |
+| Study Area | Easting 246,000–266,000, Northing 634,000–654,000  | Buffered layer to create new 1 km buffer boundary surrounding the study area to avoid edge effects |
 | OS OpenMap Local | study area 1 km buffer layer (Clip) |  |
 | OS Open Roads | study area 1 km buffer layer (Clip) |  |
 | Carbon and Peatland 2016 map | study area 1 km buffer layer (Clip) | Filtered IMPORTANCE field to classes 1 and 2 and 181 features remained |
-| SSSIs, SPAs, SACs | study area 1 km buffer layer (Clip) | Layers were merged (Merge tool) as they all followed the same rule of exclusion if present. NO SACs, 4 SSSIs and 1 SPA within study area |
+| SSSIs, SPAs, SACs | study area 1 km buffer layer (Clip) | Layers were merged (Merge tool) as they all followed the same rule of exclusion if present. No SACs, 4 SSSIs and 1 SPA within study area |
 | OS Terrain 50 | study area (Clip Raster by Extent) | Nine DTM tiles (NS43-45, NS53-55, NS63-65) were merged. |
 | OpenStreetMap Turbines | study area (Clip) | Reprojected to EPSG:27700, then clipped |
-| Landscape Character Assessment | study area (Clip) | Added 'Area_km2' and 'LCT_Group' fields |
+| Landscape Character Assessment | study area (Clip) | Added 'Area_km<sup>2</sup>' and 'LCT_Group' fields |
 
 ## Results
 ## Maps
