@@ -34,6 +34,14 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 | OpenStreetMap Turbines | study area (Clip) | Reprojected to EPSG:27700, then clipped |
 | Landscape Character Assessment | study area (Clip) | Added 'Area_km<sup>2</sup>' and 'LCT_Group' fields |
 
+## 3. Constraint criteria
+Proposed turbine dimensions were selected from the Whitelee Repowering Scope Report.
+- Hub height: 164 m
+- Rotor radius: 86 m 
+- Tip height: 250 m
+
+
+
 ## Results
 ## Maps
 Interactive web map: https://arcg.is/9LvW02
