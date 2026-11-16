@@ -35,7 +35,7 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 | Landscape Character Assessment | study area (Clip) | Added 'Area_km<sup>2</sup>' and 'LCT_Group' fields |
 
 ## 3. Constraint criteria
-Proposed turbine dimensions were selected from the Whitelee Repowering Scope Report.
+Proposed turbine dimensions were selected from the Whitelee Repowering Scope Report (ScottishPower Renewables, 2026).
 - Hub height: 164 m
 - Rotor radius: 86 m 
 - Tip height: 250 m
@@ -64,4 +64,8 @@ Raw data is not included in the repository and can be downloaded from each provi
 Scottish Government (2022). *Onshore wind: policy statement 2022*. Available at: https://www.gov.scot/publications/onshore-wind-policy-statement-2022/ (Accessed: 8 November 2026).  
 
 Scottish Natural Heritage (2019). *Landscape Character Assessment 2019*. [dataset]. Available at: https://opendata.nature.scot/datasets/18520effe11a4cffa0f22f19a22ac57a_0 (Accessed: 8 November 2026).
+
+ScottishPower Renewables (2026). Whitelee Windfarm Repowering: Scoping Report. Submitted 24 July 2026. Energy Consents Unit case ECU00006441. aVAILABLE AT: https://energyconsents.scot/ApplicationDetails.aspx?cr=ECU00006441 (Accessed: 23/10/2026).
+
+
 ## AI Use (Fair-Use Statement)
