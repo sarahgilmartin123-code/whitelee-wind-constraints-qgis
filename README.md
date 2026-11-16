@@ -7,7 +7,7 @@ The Scottish Government's ambition for installed capacity of onshore wind in Sco
 ## Aim
 To identify constraint-free land for wind farm development at Whitelee, south of Glasgow.
 ## Study Area
-The study area is centred approximately 22 km south of Glasgow city centre, covering an area of 400 km<sup>2</sup> (20 by 20 km). Surrounding towns include Newton Mearns, Kilmarnock and East Kilbride. The grid extent is Easting 246,000 – 266,000 m and Northing 634,000 – 654,000 m (British National Grid, EPSG:27700). 
+The study area is centred approximately 22 km south of Glasgow city centre, covering an area of 400 km<sup>2</sup> (20 x 20 km). Surrounding towns include Newton Mearns, Kilmarnock and East Kilbride. The grid extent is Easting 246,000 – 266,000 m and Northing 634,000 – 654,000 m (British National Grid, EPSG:27700). 
 
 The area is made up of various landscape types with most of it consisting of moorland (62.59%); the rest is a mixture of farmland, river valleys and some urban areas. These groups were derived from NatureScot's Landscape Character Types (Scottish Natural Heritage, 2019). 
 ## Methods
@@ -25,7 +25,7 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 
 | Dataset | Clipped to (tool) | Other preparation |
 |---|---|---|
-| Study Area | Easting 246,000–266,000, Northing 634,000–654,000  | Buffered layer to create new 1 km buffer boundary surrounding the study area to avoid edge effects |
+| Study Area | Easting 246,000 - 266,000, Northing 634,000 - 654,000  | Buffered layer to create new 1 km buffer boundary surrounding the study area to avoid edge effects |
 | OS OpenMap Local | study area 1 km buffer layer (Clip) |  |
 | OS Open Roads | study area 1 km buffer layer (Clip) |  |
 | Carbon and Peatland 2016 map | study area 1 km buffer layer (Clip) | Filtered IMPORTANCE field to classes 1 and 2 and 181 features remained |
@@ -35,7 +35,7 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 | Landscape Character Assessment | study area (Clip) | Added 'Area_km<sup>2</sup>' and 'LCT_Group' fields |
 
 ## 3. Constraint criteria
-Proposed turbine dimensions were selected from the Whitelee Repowering Scope Report (ScottishPower Renewables, 2026).
+Maximum proposed turbine dimensions were selected from the Whitelee Repowering Scoping Report (ScottishPower Renewables, 2026).
 - Hub height: 164 m
 - Rotor radius: 86 m 
 - Tip height: 250 m
