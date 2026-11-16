@@ -65,7 +65,7 @@ Scottish Government (2022). *Onshore wind: policy statement 2022*. Available at:
 
 Scottish Natural Heritage (2019). *Landscape Character Assessment 2019*. [dataset]. Available at: https://opendata.nature.scot/datasets/18520effe11a4cffa0f22f19a22ac57a_0 (Accessed: 8 November 2026).
 
-ScottishPower Renewables (2026). Whitelee Windfarm Repowering: Scoping Report. Submitted 24 July 2026. Energy Consents Unit case ECU00006441. aVAILABLE AT: https://energyconsents.scot/ApplicationDetails.aspx?cr=ECU00006441 (Accessed: 23/10/2026).
+ScottishPower Renewables (2026). Whitelee Windfarm Repowering: Scoping Report. Submitted 24 July 2026. Energy Consents Unit case ECU00006441. Available at: https://energyconsents.scot/ApplicationDetails.aspx?cr=ECU00006441 (Accessed: 23/10/2026).
 
 
 ## AI Use (Fair-Use Statement)
