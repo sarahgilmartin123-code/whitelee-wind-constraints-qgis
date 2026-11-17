@@ -44,7 +44,8 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 
 ## Results
 ## Maps
-Interactive web map: https://arcg.is/9LvW02
+Interactive web map 1. Extent of locational constraints at Whitelee. Link: https://arcg.is/9LvW02
+Interactive web map 2. Whitelee constraint-free areas and existing turbines. Link:  https://arcg.is/0HnDqH2
 
 ## Script
 ## Data Sources and Licences
