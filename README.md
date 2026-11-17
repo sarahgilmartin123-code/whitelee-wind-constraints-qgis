@@ -51,13 +51,13 @@ Interactive web map: https://arcg.is/9LvW02
 
 | Dataset | Provider | Acknowledgement | Licence | Use |
 |---|---|---|---|---|
-| OS OpenMap Local | Ordnance Survey | Contains Ordnance Survey data © Crown copyright and database right 2026 | OS OpenData | Constraint: buildings, woodlands and surface water |
-| OS Open Roads | Ordnance Survey | Contains Ordnance Survey data © Crown copyright and database right 2026 | OS OpenData | Roads constraint |
-| Carbon and Peatland 2016 map | NatureScot (SNH) and the James Hutton Institute | Carbon and Peatland 2016 map, © SNH and JHI. Map produced by SNH using data from the James Hutton Institute, used with permission, all rights reserved. UK Non-Commercial Government Licence, version 2. | Non-Commercial Government Licence v2 | Peat classes 1 and 2 |
-| SSSIs, SPAs, SACs | NatureScot (SNH) | Protected Areas: SSSIs, SPAs, SACs (Copyright Scottish Natural Heritage) Contains Ordnance Survey data © Crown copyright and database right (2022, 2023). Available under the Open Government Licence v3.0. | OGL v3.0 | Protected areas constraint |
-| OS Terrain 50 | Ordnance Survey | Contains Ordnance Survey data © Crown copyright and database right 2026 | OS OpenData | Slope (>15 degrees) |
+| OS OpenMap Local | Ordnance Survey | Contains OS data © Crown copyright and database right 2026 | OS OpenData | Constraint: buildings, woodlands and surface water |
+| OS Open Roads | Ordnance Survey | Contains OS data © Crown copyright and database right 2026 | OS OpenData | Roads constraint |
+| Carbon and Peatland 2016 map | NatureScot (SNH) and the James Hutton Institute | Carbon and Peatland 2016 map, © SNH and JHI. Map produced by SNH using data from the James Hutton Institute, used with permission, all rights reserved. UK Non-Commercial Government Licence v2.0. | Non-Commercial Government Licence v2.0 | Peat classes 1 and 2 |
+| SSSIs, SPAs, SACs | NatureScot (SNH) | Protected Areas: SSSIs, SPAs, SACs (Copyright Scottish Natural Heritage). Contains OS data © Crown copyright and database right (2022, 2023). Available under the Open Government Licence v3.0. | OGL v3.0 | Protected areas constraint |
+| OS Terrain 50 | Ordnance Survey | Contains OS data © Crown copyright and database right 2026 | OS OpenData | Slope (>15 degrees) |
 | OpenStreetMap | OpenStreetMap contributors | © OpenStreetMap contributors, openstreetmap.org/copyright. | ODbL | Existing turbines and basemap |
-| Landscape Character Assessment | NatureScot (SNH) | © SNH, contains Ordnance Survey data © Crown copyright and database right (2021). Available under the Open Government Licence v3.0. | OGL v3.0 | Landscape types (Study Area description) |
+| Landscape Character Assessment | NatureScot (SNH) |  | OGL v3.0 | Landscape types (Study Area description) |
 
 Raw data is not included in the repository and can be downloaded from each provider.
 ## References
