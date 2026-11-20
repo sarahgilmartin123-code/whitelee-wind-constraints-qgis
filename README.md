@@ -89,7 +89,15 @@ Settings:
 - Resolution: 400 columns by 400 rows
 - Output CRS: EPSG:27700, British National Grid
 
-The output was saved as a new layer, called constraints_total. To check validity of the data, the sum of all means of the individual constraint layers was matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. 
+The output was saved as a new layer, called constraints_total. To check validity of the data, the sum of all means of the individual constraint layers was matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. The statistics list produced from constraints_total showed that the layer had 100% valid cells, which demonstrated the NoData value used worked.
+
+Following this, a map was produced to display the constraint-free areas. This was done using the 'Raster Calculator' tool on the constraints_total layer, with the following expression:
+
+"constraints_total@1" = 0
+
+The new layer was saved as constraint_free, and the statistics were inspected, confirming the mean value of 0.0263 matched with the same value given on the unique values table, where the percentage of the study area covered was 2.63%.  Following this, the layer was converted into polygons using the 'Polygonize' tool. The new vector layer was outputted and saved as constraint_free_areas, and the attribute table was inspected.The layer was comprised of 254 features, of those values 249 had a DN value of 1 (constraint-free areas) and 5 features had a DN value of 0 (constrained). Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
+
+
 
 ## Results
 
@@ -104,7 +112,7 @@ Statistics for each constraint raster layer are displayed in the table below.
 | c_peat | Importance Classes 1 & 2 | 0 | 1 | 100 | 0.1020 | 10.20% | 40.78 |
 | c_protected | No buffer, SSSI + SPA (no SACs in area) | 0 | 1 | 100 | 0.0200 | 2.00% | 7.98 |
 | c_slope | >15 degrees (excluded) | 0 | 1 | 100 | 0.0033 | 0.33% | 1.33 |
-| Total |  |  |  |  | 2.1097 | 0.00% | 0.00 |
+| Total |  |  |  |  | 2.1097 | |  |
 | Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) | | |
 
 Next, the number of cells at each score was counted using the Raster layer unique values report. The table below displays the distribution of cells across the number of constraints (0 to 5) per cell.
