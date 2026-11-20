@@ -89,6 +89,7 @@ Settings:
 - Resolution: 400 columns by 400 rows
 - Output CRS: EPSG:27700, British National Grid in line with all other data and the output layer was saved as constraints_total
 
+## Results
 
 - STATISTICS_MINIMUM=0
 - STATISTICS_MAXIMUM=5
@@ -124,7 +125,7 @@ The table below displays the total raster count for each cell.
 | 4 | 12726 | 31815000 | 31.82 | 795.38% |
 | 5 | 232 | 580000 | 0.58 | 14.50% |
 
-## Results
+
 ## Maps
 1. Interactive web map 1. Extent of locational constraints at Whitelee. Link: https://arcg.is/9LvW02
 
