@@ -73,11 +73,37 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 
 Raw data is not included in the repository and can be downloaded from each provider.
 ## References
+
+NatureScot (2021). Bats and onshore wind turbines: survey assessment and mitigation. Available at: https://www.nature.scot/bats-and-onshore-wind-turbines-survey-assessment-and-mitigation#7.1.2%C2%A0+Buffers-01 (Accessed: 23rd October 2026).
+
+NatureScot (2026). Advising on peatland habitats and carbon-rich soils in development management. Available at: https://www.nature.scot/doc/advising-peatland-habitats-and-carbon-rich-soils-development-management (Accessed: 23/10/2026).
+
+Rutland County Council (2012). Wind Turbine Developments: Supplementary Planning Document. Oakham: Rutland County Council. Adopted 12/11/2012. Available at: https://www.rutland.gov.uk/sites/default/files/2022-12/Wind%20Turbines%20SPD%20%282012%29.pdf (Accessed: 23rd October 2026).
+
+Scottish Government, Scottish Natural Heritage, SEPA (2017). Peatland Survey. Guidance on Developments on Peatland, on-line version only. Available at: https://www.gov.scot/binaries/content/documents/govscot/publications/advice-and-guidance/2018/12/peatland-survey-guidance/documents/peatland-survey-guidance-2017/peatland-survey-guidance-2017/govscot%3Adocument/Guidance%2Bon%2Bdevelopments%2Bon%2Bpeatland%2B-%2Bpeatland%2Bsurvey%2B-%2B2017.pdf (Accessed: 24/10/2026).
+
 Scottish Government (2022). *Onshore wind: policy statement 2022*. Available at: https://www.gov.scot/publications/onshore-wind-policy-statement-2022/ (Accessed: 8 November 2026).  
+
+Scottish Government (2023). National Planning Framework 4. Edinburgh: Scottish Government. Available at: https://www.gov.scot/publications/national-planning-framework-4/ (Accessed:24/10/2026). 
+
+Scottish Parliament (2023). Written question and answer S6W-20063, answered 14 August 2023. Available at: https://www.parliament.scot/chamber-and-committees/questions-and-answers/question?ref=S6W-20063 (Accessed: 24th October 2026)
 
 Scottish Natural Heritage (2019). *Landscape Character Assessment 2019*. [dataset]. Available at: https://opendata.nature.scot/datasets/18520effe11a4cffa0f22f19a22ac57a_0 (Accessed: 8 November 2026).
 
+SP Energy Networks (2023a). 'Appendix 7.1: Watercourse Crossings and Buffers', in The Glenmuckloch to Glenglass
+Reinforcement Project: Environmental Impact Assessment Report, Volume 4. Available at:  https://www.spenergynetworks.co.uk/userfiles/file/Volume_4_Appendix_7.1_Watercourse_Crossings.pdf (Accessed: 23/10/26).
+
+SP Energy Networks (2023b). The Glenmuckloch to Glenglass
+Reinforcement Project: Environmental Impact Assessment Report: Non-Technical Summary. January 2023. Available at: https://www.spenergynetworks.co.uk/userfiles/file/EIA_Report_Non-Technical_Summary.pdf (Accessed:23/10/2026).
+
 ScottishPower Renewables (2026). Whitelee Windfarm Repowering: Scoping Report. Submitted 24 July 2026. Energy Consents Unit case ECU00006441. Available at: https://energyconsents.scot/ApplicationDetails.aspx?cr=ECU00006441 (Accessed: 23/10/2026).
 
+ScottishPower Renewables (2026). Whitelee Windfarm Repowering: Scoping Report. Available at: https://www.scottishpowerrenewables.com/documents/d/guest/Whitelee_Windfarm_Repowering_Scoping_Report (Accessed: 23rd October 2026). 
+
+Traffic Scotland (n.d.). Trunk road network. Available at: https://www.traffic.gov.scot/trunk-roads (Accessed: 24th October 2026).
+
+Transport Scotland (2013). Consultation on East Lothian Guidance for wind farms over twelve megawatts [letter to East Lothian Council, 17/05/2013]. Available at: https://eastlothianconsultations.co.uk/housing-environment/12mw_wind_spg/results/response-transport-scotland_redacted.pdf (Accessed: 23rd October 2026).
+
+Welsh Assembly Government (2005). Planning Policy Wales: Technical Advice Note 8: Planning for Renewable Energy. Cardiff: Welsh Assembly Government. Available at: https://www.gov.wales/sites/default/files/publications/2018-09/tan8-renewable-energy_0.pdf  (Accessed: 23rd October 2026).
 
 ## AI Use (Fair-Use Statement)
