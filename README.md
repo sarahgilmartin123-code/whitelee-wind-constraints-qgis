@@ -104,15 +104,15 @@ Next, the number of cells at each score were counted using the Raster layer uniq
 
 | "Layer" | "Rule" | "Min" | "Max" | "Valid (%)" | "Mean" | "% of study area " | "km2 (mean x 400)" |
 |---|---|---|---|---|---|---|---|
-| c_buildings | 500 m buffer | 0 | 1 | 100 | 0.66465624999999 | 0.66465624999999 | 265.862499999996 |
-| c_woodland | 136 m buffer | 0 | 1 | 100 | 0.59354374999999 | 0.59354374999999 | 237.417499999996 |
-| c_roads | Tiered: 375 / 250 / 0 m | 0 | 1 | 100 | 0.41016875 | 0.41016875 | 164.0675 |
-| c_water | 50 m buffer | 0 | 1 | 100 | 0.3161 | 0.3161 | 126.44 |
-| c_peat | Importance Classes 1 & 2 | 0 | 1 | 100 | 0.10195 | 0.10195 | 40.78 |
-| c_protected | No buffer, SSSI +SPA (no SACs in area) | 0 | 1 | 100 | 0.01995625 | 0.01995625 | 7.9825 |
-| c_slope | >15 degrees (excluded) | 0 | 1 | 100 | 0.003325 | 0.003325 | 1.33 |
-| Total |  |  |  |  | 2.10969999999998 |  |  |
-| Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) |  |  |
+| c_buildings | 500 m buffer | 0 | 1 | 100 | 0.6647 | 66.47% | 265.86 |
+| c_woodland | 136 m buffer | 0 | 1 | 100 | 0.5935 | 59.35% | 237.42 |
+| c_roads | Tiered: 375 / 250 / 0 m | 0 | 1 | 100 | 0.4102 | 41.02% | 164.07 |
+| c_water | 50 m buffer | 0 | 1 | 100 | 0.3161 | 31.61% | 126.44 |
+| c_peat | Importance Classes 1 & 2 | 0 | 1 | 100 | 0.1020 | 10.20% | 40.78 |
+| c_protected | No buffer, SSSI +SPA (no SACs in area) | 0 | 1 | 100 | 0.0200 | 2.00% | 7.98 |
+| c_slope | >15 degrees (excluded) | 0 | 1 | 100 | 0.0033 | 0.33% | 1.33 |
+| Total |  |  |  |  | 2.1097 | 0.00% | 0.00 |
+| Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) | 0.00% | 0.00 |
 
 Raster Count 				
 Value	Count	m2	km2	% of Study Area
