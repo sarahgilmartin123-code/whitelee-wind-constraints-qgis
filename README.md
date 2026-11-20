@@ -91,11 +91,16 @@ Settings:
 
 The output was saved as a new layer, called constraints_total. To check validity of the data, the sum of all means of the individual constraint layers was matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. The statistics list produced from constraints_total showed that the layer had 100% valid cells, which demonstrated the NoData value used worked.
 
-Following this, a map was produced to display the constraint-free areas. This was done using the 'Raster Calculator' tool on the constraints_total layer, with the following expression:
+A unique values report was produced from constraints_total, which is displayed in the results. The layer symbology was improved for readability by using 'palette/unique values' to display each value with a distinct, identifiable colour. A map was produced using this layer to display the extent of overlapping constraints across the study area.
+ 
+
+The constraint-free areas were identified using the 'Raster Calculator' tool on the constraints_total layer, with the following expression:
 
 "constraints_total@1" = 0
 
-The new layer was saved as constraint_free, and the statistics were inspected, confirming the mean value of 0.0263 matched with the same value given on the unique values table, where the percentage of the study area covered was 2.63%.  Following this, the layer was converted into polygons using the 'Polygonize' tool. The new vector layer was outputted and saved as constraint_free_areas, and the attribute table was inspected.The layer was comprised of 254 features, of those values 249 had a DN value of 1 (constraint-free areas) and 5 features had a DN value of 0 (constrained). Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
+The expression gives any constraint-free features (DN=0) a value of 1, and the rest are constrained areas given a value of 0 (DN values other than 0). The new raster layer was saved as constraint_free and the statistics were inspected. The mean value of 0.0263 matched with the same value given in the unique values table previously, where the percentage of the study area covered was 2.63%.
+
+Following this, the layer was converted into polygons using the 'Polygonize' tool. The new vector layer was outputted and saved as constraint_free_areas, and the attribute table was inspected. The layer comprised 254 features, 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. This suggests the usable land consists of many small patches, in contrast to the unusable land. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
 
 
 
