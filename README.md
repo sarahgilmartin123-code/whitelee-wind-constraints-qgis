@@ -54,6 +54,7 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 
 ### 4. Combining the constraints
 
+Ech vector layer was rasterised using the 'Rasterise (Vector to Raster)' tool. All layers were set to the same setting to allow them to be combined seamlessly in the following step. For each layer, 'A fixed value to burn' was set to  1, as each constraint must match the value of 1, to enable the combining of each layer. The output extent was set to the study area for each layer, with EPSG:27700. A width and height resolution of 50 by 50 was used to match the OS Terrain 50 dataset, maintaining the alignment of slope values. When rasterising the buildings layer, QGIS had set a NoData value of 0 to output bands, which resulted in only 66% of the area being outputted, as it exluded all area with a value of 0. To overcome this, a NoData value of -9999 was set, a value that lies outwith the datasets. This ensures every cell with value 0 maintains its value. Output data type was set to Float32, in line with all other raster types, to avoid issues when layers are combined. CRS was set to EPSG:2700, the same as all previous layers. 
 
 ## Results
 ## Maps
@@ -65,7 +66,9 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 This is a simplified, independent project, not a real planning or site assessment. 
 
 - Woodland buffer: NatureScot recommended a 50 m clearance between blade tip and woodland, using a formula that included hub height, blade length and tree height (NatureScot, 2021). Instead, I measured it horizontally, adding the 50 m to the 86 m rotor radius, excluding hub and tree height. As a result, it is likely that my buffer is larger than the formula would have produced, therefore excluding usable land. This choice was made to keep the project straightforward and approach with caution.
-- Surface water buffer: A 50 m water buffer was used, based on recommendations by SEPA for an SP Energy Networks overhead line project (SP Energy Networks, 2023a). However, the project's final design used a 10 m buffer because the number of small watercourses and drains meant that the larger buffer wasn't able to be met, due to spacing requirements between towers (SP Energy Networks, 2023b). Therefore, the 50 m buffer likely excludes more land than a real-world project would use.  
+- Surface water buffer: A 50 m water buffer was used, based on recommendations by SEPA for an SP Energy Networks overhead line project (SP Energy Networks, 2023a). However, the project's final design used a 10 m buffer because the number of small watercourses and drains meant that the larger buffer wasn't able to be met, due to spacing requirements between towers (SP Energy Networks, 2023b). Therefore, the 50 m buffer likely excludes more land than a real-world project would use.
+- Building buffer: Since OpenMap Local did not give information on building use, all entries were treated equally and given the same buffer. Therefore, land that was usable may have been omitted as a result of the cautious approach. This could be improved by use of data that records building use, to exclude homes without a noise buffer.
+- OS Terrain 50 dataset: It is known to smooth terrain, which could result in some areas that are steeper than 15 degrees being identified as meeting the slope threshold.  
 
 ## Script
 ## Data Sources and Licences
