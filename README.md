@@ -74,7 +74,7 @@ This is a simplified, independent project, not a real planning or site assessmen
 | SSSIs, SPAs, SACs | NatureScot (SNH) | Protected Areas: SSSIs, SPAs, SACs (Copyright Scottish Natural Heritage). Contains OS data © Crown copyright and database right (2022, 2023). Available under the Open Government Licence v3.0. | OGL v3.0 | Protected areas constraint, no SACs fall within study area |
 | OS Terrain 50 | Ordnance Survey | Contains OS data © Crown copyright and database right 2026 | OS OpenData | Slope (>15 degrees) |
 | OpenStreetMap | OpenStreetMap contributors | © OpenStreetMap contributors, openstreetmap.org/copyright. | ODbL | Existing turbines and basemap |
-| Landscape Character Assessment | NatureScot (SNH) |  | OGL v3.0 | Landscape types (Study Area description) |
+| Landscape Character Assessment | NatureScot (SNH) | © SNH , contains Ordnance Survey data © Crown copyright and database right (2021) | OGL v3.0 | Landscape types (Study Area description) |
 
 Raw data is not included in the repository and can be downloaded from each provider.
 ## References
