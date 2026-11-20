@@ -76,20 +76,20 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 
 - CRS: EPSG:27700 British National Grid.
 
-Following this, the merged DTM layer was used to obtain slope values using the 'slope' tool. The z factor was set to 1 as both the height and horizontal units (EPSG:27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes ≤ 15° = 0, which was outputted to create a new layer, c_slope. When the new slope layer was compared with the OSM basemap, a small white patch that corresponds to a steep sloped area was identifiable on the slope layer, which correlated with Loudoun Hill on the OSM basemap.  
+Following this, the merged DTM layer was used to obtain slope values using the 'Slope' tool. The Z factor was set to 1 as both the height and horizontal units (EPSG:27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes ≤ 15° = 0, which was outputted to create a new layer, c_slope. When the new slope layer was compared with the OSM basemap, a small white patch that corresponds to a steep sloped area was identifiable on the slope layer, which correlated with Loudoun Hill on the basemap.  
 
 
-The 'Raster Calculator' tool was used to add all raster layers together, to obtain a raster count for each 50m cell. The following expression was used:
+The 'Raster Calculator' tool was used to add all raster layers together, to obtain a raster count for each 50 m cell. The following expression was used:
 
 "c_buildings@1" + "c_peat@1" + "c_protected@1" + "c_roads@1" + "c_slope@1" + "c_water@1" + "c_woodland@1"
 
 
 Settings: 
-- Output extent: set to the study site 
+- Output extent: set to the study area
 - Resolution: 400 columns by 400 rows
 - Output CRS: EPSG:27700, British National Grid
 
-The expression was outputted, with the result saved as a new layer called constraints_total.
+The output was saved as a new layer, called constraints_total. Statistics for each constraint raster layer are displayed in the table below. To check validity of the data, the sum of all means of the individual constraint layers were added up and the result matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. Next, the number of cells at each score were counted using the Raster layer unique values report. 
 
 ## Results
 
@@ -98,8 +98,6 @@ The expression was outputted, with the result saved as a new layer called constr
 - STATISTICS_MEAN=2.1097
 - STATISTICS_STDDEV=0.97339786829437
 - STATISTICS_VALID_PERCENT=100
-
-Statistics for each are displayed in the table below. To check validity of the data, the sum of all means of the individual constraint layers were added up and the result matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. 
 
 | Layer | Rule | Min | Max | Valid (%) | Mean | % of study area | km<sup>2</sup> (mean x 400) |
 |---|---|---|---|---|---|---|---|
@@ -113,7 +111,7 @@ Statistics for each are displayed in the table below. To check validity of the d
 | Total |  |  |  |  | 2.1097 | 0.00% | 0.00 |
 | Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) | | |
 
-Next, the number of cells at each score were counted using the Raster layer unique values report. The table below displays the distribution of cells across the number of constraints (0 to 5) per cell.
+The table below displays the distribution of cells across the number of constraints (0 to 5) per cell.
 
 | Value | Cell count | m<sup>2</sup> | km<sup>2</sup> | % of study area |
 |---|---|---|---|---|
