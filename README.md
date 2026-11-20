@@ -54,7 +54,7 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 
 ### 4. Combining the constraints
 
-Each vector layer was rasterised using the 'Rasterise (Vector to Raster)' tool. All layers were set to the same setting to allow them to be combined seamlessly, as set out below: 
+Each vector layer was rasterised using the 'Rasterise (Vector to Raster)' tool. All rasterised vector layers were set to the same setting to allow them to be combined seamlessly, as set out below: 
 
 - A fixed value to burn: 1.
 
@@ -77,6 +77,9 @@ When rasterising the buildings layer, QGIS had set a NoData value of 0 to output
 Type was chosen in line with all other raster types, to avoid issues when layers are combined. 
 
 - CRS: EPSG: 27700 British National Grid.
+
+Following this, the merged DTM layer was used to obtain slope values using the 'slope' tool. The z value was set to 1 as both the height and horizontal units (EPSG: 27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes <15° = 0, which was outputted to create a new layer, c_slope.
+
 
 ## Results
 ## Maps
