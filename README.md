@@ -103,7 +103,7 @@ The constraints_total layer had a range from 0 to 5. Statistics are shown in the
 
 Next, the number of cells at each score were counted using the Raster layer unique values report. 
 
-| "Layer" | "Rule" | "Min" | "Max" | "Valid (%)" | "Mean" | "% of study area " | "km2 (mean x 400)" |
+| Layer | Rule | Min | Max | Valid (%) | Mean | % of study area | km2 (mean x 400) |
 |---|---|---|---|---|---|---|---|
 | c_buildings | 500 m buffer | 0 | 1 | 100 | 0.6647 | 66.47% | 265.86 |
 | c_woodland | 136 m buffer | 0 | 1 | 100 | 0.5935 | 59.35% | 237.42 |
