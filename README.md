@@ -78,7 +78,7 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 
 - CRS: EPSG: 27700 British National Grid.
 
-Following this, the merged DTM layer was used to obtain slope values using the 'slope' tool. The z value was set to 1 as both the height and horizontal units (EPSG: 27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes <15° = 0, which was outputted to create a new layer, c_slope. When the new slope layer was compared with the OS basemap, using the 'Identify' tool, a small white patch that corresponds to a steep sloped area, was identifiable on the slope layer, which correlated with Loudon Hill on the OSM basemap.  
+Following this, the merged DTM layer was used to obtain slope values using the 'slope' tool. The z factor was set to 1 as both the height and horizontal units (EPSG: 27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes ≤ 15° = 0, which was outputted to create a new layer, c_slope. When the new slope layer was compared with the OS basemap, a small white patch that corresponds to a steep sloped area was identifiable on the slope layer, which correlated with Loudon Hill on the OSM basemap.  
 
 ## Results
 ## Maps
