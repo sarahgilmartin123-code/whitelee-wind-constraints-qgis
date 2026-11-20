@@ -114,15 +114,15 @@ Next, the number of cells at each score were counted using the Raster layer uniq
 | Total |  |  |  |  | 2.1097 | 0.00% | 0.00 |
 | Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) | 0.00% | 0.00 |
 
-Raster Count 				
-Value	Count	m2	km2	% of Study Area
-0	4211	10527500	10.5275	2.63
-1	41932	104830000	104.83	26.21
-2	59141	147852500	147.8525	36.96
-3	41758	104395000	104.395	26.10
-4	12726	31815000	31.815	7.95
-5	232	580000	0.58	0.15
-- Constraint-free area (km2): 10.53 km2 (2dp)
+The table below displays the total raster count for each cell. 
+| "Value" | "Cell count" | "m2" | "km2" | "% of study area" |
+|---|---|---|---|---|
+| 0 | 4211 | 10527500 | 10.53 | 263.19% |
+| 1 | 41932 | 104830000 | 104.83 | 2620.75% |
+| 2 | 59141 | 147852500 | 147.85 | 3696.31% |
+| 3 | 41758 | 104395000 | 104.40 | 2609.88% |
+| 4 | 12726 | 31815000 | 31.82 | 795.38% |
+| 5 | 232 | 580000 | 0.58 | 14.50% |
 
 ## Results
 ## Maps
