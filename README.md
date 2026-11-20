@@ -47,7 +47,7 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 | Roads tier 1: Motorways, trunk, A roads | 375 m buffer | I selected a 375 m buffer based on correspondence from Transport Scotland,  who asked East Lothian Council to require sites to be a minimum of 1.5 x tip height from kerb line of trunk roads; 1.5 x 250 m = 375 m (Transport Scotland, 2013). The letter included this requirement for trunk roads only, which prompted me to make a tiered buffer system for road types. I applied this choice to motorways and A roads as a precautionary simplification, as trunk roads are primarily motorways and major A roads (Traffic Scotland, n.d.).  |
 | Roads tier 2: B, minor, local roads, local access and secondary access roads  | 250 m buffer | As I found no Scottish minimum, I based the 250 m buffer choice on Rutland County Council, to account for fall-over distance: tip height (Rutland County Council, 2012).  |
 | Roads tier 3: Restricted local access roads | None  | Based on my judgement. Upon inspection of OS Open Roads, these roads were mainly for private use as tracks for Whitelee wind farm within the study area.  |
-| Water | 50 m buffer | Cautious choice based on SEPA's recommendation in a scoping consultation for SP Energy Networks, suggesting a 50 m buffer around each watercourse (SP Energy Networks, 2023a; SP Energy Networks, 2023b). |
+| Water | 50 m buffer | Cautious choice based on SEPA's recommendation in a scoping consultation for SP Energy Networks, suggesting a 50 m buffer around each watercourse (SP Energy Networks, 2023a, 2023b). |
 | Peat | Importance Classes 1 & 2 | No buffer. Filtered to only include importance classes 1 and 2, regarded as land dominated by rich peat soil and peatland habitats (NatureScot, 2026; Scottish Government, Scottish Natural Heritage, SEPA, 2017). |
 | Protected areas | No buffer, SSSI + SPA (no SACs in area) | No buffer; excluded where present, precautionary screen (Scottish Government, 2023). |
 | Slope | Steeper than 15°  | No buffer; excluded slopes steeper than 15 degrees, based on Welsh Government guidance (Welsh Assembly Government, 2005, Annex D, p. 58).  |
@@ -98,7 +98,7 @@ Scottish Parliament (2023). Written question and answer S6W-20063, answered 14 A
 SP Energy Networks (2023a). 'Appendix 7.1: Watercourse Crossings and Buffers', in The Glenmuckloch to Glenglass
 Reinforcement Project: Environmental Impact Assessment Report, Volume 4. Available at:  https://www.spenergynetworks.co.uk/userfiles/file/Volume_4_Appendix_7.1_Watercourse_Crossings.pdf (Accessed: 24th October 2026).
 
-ScottishPower Renewables (2026). Whitelee Windfarm Repowering: Scoping Report. Energy Consents Unit case ECU0000644. Available at: https://www.scottishpowerrenewables.com/documents/d/guest/Whitelee_Windfarm_Repowering_Scoping_Report (Accessed: 23rd October 2026). 
+ScottishPower Renewables (2026). Whitelee Windfarm Repowering: Scoping Report. Energy Consents Unit case ECU00006441. Available at: https://www.scottishpowerrenewables.com/documents/d/guest/Whitelee_Windfarm_Repowering_Scoping_Report (Accessed: 23rd October 2026). 
 
 SP Energy Networks (2023b). The Glenmuckloch to Glenglass
 Reinforcement Project: Environmental Impact Assessment Report: Non-Technical Summary. January 2023. Available at: https://www.spenergynetworks.co.uk/userfiles/file/EIA_Report_Non-Technical_Summary.pdf (Accessed:23rd October 2026).
