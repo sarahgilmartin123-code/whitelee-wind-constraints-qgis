@@ -70,7 +70,7 @@ These values were used to match the OS Terrain 50 dataset, to maintain the align
   
 - NoData value to output bands: -9999.
 
-When rasterising the buildings layer, QGIS had set a NoData value of 0 to output bands, which resulted in only 66% of the area being outputted, as it exluded all area with a value of 0. The project's method relies on cell's having a value of 0 or 1, constrained or constraint-free, respectively. If cells were given a NoData value, the raster calculator would have outputted a NoData value. To overcome this, a NoData value of -9999 was set, a value that lies outwith the datasets. This value was applied to the settings of all layers to ensure that every cell with value 0 maintained its value. 
+When rasterising the buildings layer, QGIS had set a NoData value of 0 to output bands, which resulted in only 66% of the area being outputted, as it exluded all area with a value of 0. The project's method relies on cell's having a value of 0 or 1, constrained or constraint-free, respectively. Adding the constraints would produce the total number of all constraints present within that cell. If cells were given a NoData value, the raster calculator would have outputted a NoData value. To overcome this, a NoData value of -9999 was set, a value that lies outwith the datasets. This value was applied to the settings of all layers to ensure that every cell with value 0 maintained its value. 
 
 - Output data type: Float32.
 
