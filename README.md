@@ -54,7 +54,29 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 
 ### 4. Combining the constraints
 
-Ech vector layer was rasterised using the 'Rasterise (Vector to Raster)' tool. All layers were set to the same setting to allow them to be combined seamlessly in the following step. For each layer, 'A fixed value to burn' was set to  1, as each constraint must match the value of 1, to enable the combining of each layer. The output extent was set to the study area for each layer, with EPSG:27700. A width and height resolution of 50 by 50 was used to match the OS Terrain 50 dataset, maintaining the alignment of slope values. When rasterising the buildings layer, QGIS had set a NoData value of 0 to output bands, which resulted in only 66% of the area being outputted, as it exluded all area with a value of 0. To overcome this, a NoData value of -9999 was set, a value that lies outwith the datasets. This ensures every cell with value 0 maintains its value. Output data type was set to Float32, in line with all other raster types, to avoid issues when layers are combined. CRS was set to EPSG:2700, the same as all previous layers. 
+Each vector layer was rasterised using the 'Rasterise (Vector to Raster)' tool. All layers were set to the same setting to allow them to be combined seamlessly, as set out below: 
+
+- A fixed value to burn: 1.
+
+This as each constraint must match the value of 1, to enable the combining of each layer. 
+
+- Output extent: Easting 246,000 – 266,000 m and Northing 634,000 – 654,000 m.
+
+The output extent was set to that of the study area. 
+
+- Width and Height resolution: 50 x 50 m.
+
+These values were used to match the OS Terrain 50 dataset, to maintain the alignment of slope values.
+  
+- NoData value to output bands: -9999.
+
+When rasterising the buildings layer, QGIS had set a NoData value of 0 to output bands, which resulted in only 66% of the area being outputted, as it exluded all area with a value of 0. The project's method relies on cell's having a value of 0 or 1, constrained or constraint-free, respectively. If cells were given a NoData value, the raster calculator would have outputted a NoData value. To overcome this, a NoData value of -9999 was set, a value that lies outwith the datasets. This value was applied to the settings of all layers to ensure that every cell with value 0 maintained its value. 
+
+- Output data type: Float32.
+
+Type was chosen in line with all other raster types, to avoid issues when layers are combined. 
+
+- CRS: EPSG: 27700 British National Grid.
 
 ## Results
 ## Maps
