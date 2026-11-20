@@ -43,11 +43,11 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 | Constraint | Rule | Reason |
 |---|---|---|
 | Buildings | 500 m buffer | As the Scottish Government's written answer stated that there is no recommended minimum distance between onshore wind turbines and residential properties, I chose a 500 m buffer from Welsh Assembly Government guidance as a separation distance for noise (Scottish Parliament, 2023; Welsh Assembly Government, 2005, Annex D, p. 59).  |
-| Woodland | 136 m buffer | Buffer to protect bat populations and reduce the risk of collisions. I created a simplified, precautionary buffer: I used NatureScot's guidance of a 50 m clearance buffer and added this to the rotor radius (50 m plus the 86 m rotor radius, giving 136 m) (NatureScot, 2021; ScottishPower Renewables, 2026)(see Limitations). |
-| Roads tier 1: Motorways, trunk, A roads | 375 m buffer | I selected a 375 m buffer based on correspondence from Transport Scotland,  who asked East Lothian Council to require sites to be a minimum of 1.5 x tip height from kerb line of trunk roads; 1.5 x 250 m = 375 m (Transport Scotland, 2013). The letter included this requirement for trunk roads only, which prompted me to make a tiered buffer system for road types. Applied this choice to motorways and A roads as a precautionary simplification, as trunk roads are primarily motorways and major A roads (Traffic Scotland, n.d.).  |
+| Woodland | 136 m buffer | Buffer to protect bat populations and reduce the risk of collisions. I created a simplified, precautionary buffer: I used NatureScot's guidance of a 50 m clearance buffer and added this to the rotor radius (50 m plus the 86 m rotor radius, giving 136 m) (NatureScot, 2021; ScottishPower Renewables, 2026) (see Limitations). |
+| Roads tier 1: Motorways, trunk, A roads | 375 m buffer | I selected a 375 m buffer based on correspondence from Transport Scotland,  who asked East Lothian Council to require sites to be a minimum of 1.5 x tip height from kerb line of trunk roads; 1.5 x 250 m = 375 m (Transport Scotland, 2013). The letter included this requirement for trunk roads only, which prompted me to make a tiered buffer system for road types. I applied this choice to motorways and A roads as a precautionary simplification, as trunk roads are primarily motorways and major A roads (Traffic Scotland, n.d.).  |
 | Roads tier 2: B, minor, local roads, local access and secondary access roads  | 250 m buffer | As I found no Scottish minimum, I based the 250 m buffer choice on Rutland County Council, to account for fall-over distance: tip height (Rutland County Council, 2012).  |
 | Roads tier 3: Restricted local access roads | None  | Based on my judgement. Upon inspection of OS Open Roads, these roads were mainly for private use as tracks for Whitelee wind farm within the study area.  |
-| Water | 50 m buffer | Cautious choice based SEPA's recommendation in a scoping consultation for SP Energy Network, suggesting a 50 m buffer around each watercourse (SP Energy Networks, 2023a) |
+| Water | 50 m buffer | Cautious choice based on SEPA's recommendation in a scoping consultation for SP Energy Networks, suggesting a 50 m buffer around each watercourse (SP Energy Networks, 2023a; SP Energy Networks, 2023b). |
 | Peat | Importance Classes 1 & 2 | No buffer. Filtered to only include importance classes 1 and 2, regarded as land dominated by rich peat soil and peatland habitats (NatureScot, 2026; Scottish Government, Scottish Natural Heritage, SEPA, 2017). |
 | Protected areas | No buffer, SSSI + SPA (no SACs in area) | No buffer; excluded where present, precautionary screen (Scottish Government, 2023). |
 | Slope | Steeper than 15°  | No buffer; excluded slopes steeper than 15 degrees, based on Welsh Government guidance (Welsh Assembly Government, 2005, Annex D, p. 58).  |
@@ -61,7 +61,7 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 ## Limitations
 This is a simplified, independent project, not a real planning or site assessment. 
 
-- Woodland buffer: NatureScot recommended a 50 m clearance between blade tip and woodland, using a formula that included hub height, blade length and tree height. Instead, I measured it horizontally, adding the 50 m to the 86 m rotor radius, excluding hub and tree height. As a result, it is likely that my buffer is larger than the formula would have produced, therefore excluding usable land. This choice was made to keep the project straightforward and approach with caution, as it is a simplified, independent project.    
+- Woodland buffer: NatureScot recommended a 50 m clearance between blade tip and woodland, using a formula that included hub height, blade length and tree height (NatureScot, 2021). Instead, I measured it horizontally, adding the 50 m to the 86 m rotor radius, excluding hub and tree height. As a result, it is likely that my buffer is larger than the formula would have produced, therefore excluding usable land. This choice was made to keep the project straightforward and approach with caution.   
 
 ## Script
 ## Data Sources and Licences
@@ -81,29 +81,27 @@ Raw data is not included in the repository and can be downloaded from each provi
 
 NatureScot (2021). Bats and onshore wind turbines: survey assessment and mitigation. Available at: https://www.nature.scot/bats-and-onshore-wind-turbines-survey-assessment-and-mitigation#7.1.2%C2%A0+Buffers-01 (Accessed: 23rd October 2026).
 
-NatureScot (2026). Advising on peatland habitats and carbon-rich soils in development management. Available at: https://www.nature.scot/doc/advising-peatland-habitats-and-carbon-rich-soils-development-management (Accessed: 23/10/2026).
+NatureScot (2026). Advising on peatland habitats and carbon-rich soils in development management. Available at: https://www.nature.scot/doc/advising-peatland-habitats-and-carbon-rich-soils-development-management (Accessed: 23rd October 2026).
 
 Rutland County Council (2012). Wind Turbine Developments: Supplementary Planning Document. Oakham: Rutland County Council. Adopted 12/11/2012. Available at: https://www.rutland.gov.uk/sites/default/files/2022-12/Wind%20Turbines%20SPD%20%282012%29.pdf (Accessed: 23rd October 2026).
 
-Scottish Government, Scottish Natural Heritage, SEPA (2017). Peatland Survey. Guidance on Developments on Peatland, on-line version only. Available at: https://www.gov.scot/binaries/content/documents/govscot/publications/advice-and-guidance/2018/12/peatland-survey-guidance/documents/peatland-survey-guidance-2017/peatland-survey-guidance-2017/govscot%3Adocument/Guidance%2Bon%2Bdevelopments%2Bon%2Bpeatland%2B-%2Bpeatland%2Bsurvey%2B-%2B2017.pdf (Accessed: 24/10/2026).
+Scottish Government (2022). *Onshore wind: policy statement 2022*. Available at: https://www.gov.scot/publications/onshore-wind-policy-statement-2022/ (Accessed: 8th November 2026).  
 
-Scottish Government (2022). *Onshore wind: policy statement 2022*. Available at: https://www.gov.scot/publications/onshore-wind-policy-statement-2022/ (Accessed: 8 November 2026).  
+Scottish Government (2023). National Planning Framework 4. Edinburgh: Scottish Government. Available at: https://www.gov.scot/publications/national-planning-framework-4/ (Accessed: 24th October 2026).
 
-Scottish Government (2023). National Planning Framework 4. Edinburgh: Scottish Government. Available at: https://www.gov.scot/publications/national-planning-framework-4/ (Accessed:24/10/2026). 
+Scottish Government, Scottish Natural Heritage, SEPA (2017). Peatland Survey. Guidance on Developments on Peatland, on-line version only. Available at: https://www.gov.scot/binaries/content/documents/govscot/publications/advice-and-guidance/2018/12/peatland-survey-guidance/documents/peatland-survey-guidance-2017/peatland-survey-guidance-2017/govscot%3Adocument/Guidance%2Bon%2Bdevelopments%2Bon%2Bpeatland%2B-%2Bpeatland%2Bsurvey%2B-%2B2017.pdf (Accessed: 24th October 2026). 
+
+Scottish Natural Heritage (2019). *Landscape Character Assessment 2019*. [dataset]. Available at: https://opendata.nature.scot/datasets/18520effe11a4cffa0f22f19a22ac57a_0 (Accessed: 8th November 2026).
 
 Scottish Parliament (2023). Written question and answer S6W-20063, answered 14 August 2023. Available at: https://www.parliament.scot/chamber-and-committees/questions-and-answers/question?ref=S6W-20063 (Accessed: 24th October 2026)
 
-Scottish Natural Heritage (2019). *Landscape Character Assessment 2019*. [dataset]. Available at: https://opendata.nature.scot/datasets/18520effe11a4cffa0f22f19a22ac57a_0 (Accessed: 8 November 2026).
-
 SP Energy Networks (2023a). 'Appendix 7.1: Watercourse Crossings and Buffers', in The Glenmuckloch to Glenglass
-Reinforcement Project: Environmental Impact Assessment Report, Volume 4. Available at:  https://www.spenergynetworks.co.uk/userfiles/file/Volume_4_Appendix_7.1_Watercourse_Crossings.pdf (Accessed: 23/10/26).
+Reinforcement Project: Environmental Impact Assessment Report, Volume 4. Available at:  https://www.spenergynetworks.co.uk/userfiles/file/Volume_4_Appendix_7.1_Watercourse_Crossings.pdf (Accessed: 24th October 2026).
+
+ScottishPower Renewables (2026). Whitelee Windfarm Repowering: Scoping Report. Energy Consents Unit case ECU0000644. Available at: https://www.scottishpowerrenewables.com/documents/d/guest/Whitelee_Windfarm_Repowering_Scoping_Report (Accessed: 23rd October 2026). 
 
 SP Energy Networks (2023b). The Glenmuckloch to Glenglass
-Reinforcement Project: Environmental Impact Assessment Report: Non-Technical Summary. January 2023. Available at: https://www.spenergynetworks.co.uk/userfiles/file/EIA_Report_Non-Technical_Summary.pdf (Accessed:23/10/2026).
-
-ScottishPower Renewables (2026). Whitelee Windfarm Repowering: Scoping Report. Submitted 24 July 2026. Energy Consents Unit case ECU00006441. Available at: https://energyconsents.scot/ApplicationDetails.aspx?cr=ECU00006441 (Accessed: 23/10/2026).
-
-ScottishPower Renewables (2026). Whitelee Windfarm Repowering: Scoping Report. Available at: https://www.scottishpowerrenewables.com/documents/d/guest/Whitelee_Windfarm_Repowering_Scoping_Report (Accessed: 23rd October 2026). 
+Reinforcement Project: Environmental Impact Assessment Report: Non-Technical Summary. January 2023. Available at: https://www.spenergynetworks.co.uk/userfiles/file/EIA_Report_Non-Technical_Summary.pdf (Accessed:23rd October 2026).
 
 Traffic Scotland (n.d.). Trunk road network. Available at: https://www.traffic.gov.scot/trunk-roads (Accessed: 24th October 2026).
 
