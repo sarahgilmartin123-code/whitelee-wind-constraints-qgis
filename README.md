@@ -89,15 +89,11 @@ Settings:
 - Resolution: 400 columns by 400 rows
 - Output CRS: EPSG:27700, British National Grid
 
-The output was saved as a new layer, called constraints_total. Statistics for each constraint raster layer are displayed in the table below. To check validity of the data, the sum of all means of the individual constraint layers were added up and the result matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. Next, the number of cells at each score were counted using the Raster layer unique values report. 
+The output was saved as a new layer, called constraints_total. To check validity of the data, the sum of all means of the individual constraint layers was matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. 
 
 ## Results
 
-- STATISTICS_MINIMUM=0
-- STATISTICS_MAXIMUM=5
-- STATISTICS_MEAN=2.1097
-- STATISTICS_STDDEV=0.97339786829437
-- STATISTICS_VALID_PERCENT=100
+Statistics for each constraint raster layer are displayed in the table below.
 
 | Layer | Rule | Min | Max | Valid (%) | Mean | % of study area | km<sup>2</sup> (mean x 400) |
 |---|---|---|---|---|---|---|---|
@@ -111,7 +107,7 @@ The output was saved as a new layer, called constraints_total. Statistics for ea
 | Total |  |  |  |  | 2.1097 | 0.00% | 0.00 |
 | Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) | | |
 
-The table below displays the distribution of cells across the number of constraints (0 to 5) per cell.
+Next, the number of cells at each score was counted using the Raster layer unique values report. The table below displays the distribution of cells across the number of constraints (0 to 5) per cell.
 
 | Value | Cell count | m<sup>2</sup> | km<sup>2</sup> | % of study area |
 |---|---|---|---|---|
