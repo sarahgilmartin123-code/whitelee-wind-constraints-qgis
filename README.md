@@ -34,7 +34,7 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 | OpenStreetMap Turbines | study area (Clip) | Reprojected to EPSG:27700, then clipped |
 | Landscape Character Assessment | study area (Clip) | Added 'Area_km<sup>2</sup>' and 'LCT_Group' fields |
 
-## 3. Constraint criteria
+### 3. Constraint criteria
 Maximum proposed turbine dimensions were selected from the Whitelee Repowering Scoping Report (ScottishPower Renewables, 2026).
 - Hub height: 164 m
 - Rotor radius: 86 m 
