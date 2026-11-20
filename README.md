@@ -56,9 +56,7 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 
 Each vector layer was rasterised using the 'Rasterise (Vector to Raster)' tool. All rasterised vector layers were set to the same setting to allow them to be combined seamlessly, as set out below: 
 
-- A fixed value to burn: 1.
-
-This as each constraint must match the value of 1, to enable the combining of each layer. 
+- A fixed value to burn: 1. 
 
 - Output extent: Easting 246,000 – 266,000 m and Northing 634,000 – 654,000 m.
 
@@ -70,7 +68,7 @@ These values were used to match the OS Terrain 50 dataset, to maintain the align
   
 - NoData value to output bands: -9999.
 
-When rasterising the buildings layer, QGIS had set a NoData value of 0 to output bands, which resulted in only 66% of the area being outputted, as it exluded all area with a value of 0. The project's method relies on cell's having a value of 0 or 1, constraint-free or constrained, respectively. Adding the constraints would produce the total number of all constraints present within that cell. If cells were given a NoData value, the raster calculator would have outputted a NoData value. To overcome this, a NoData value of -9999 was set, a value that lies outwith the datasets. This value was applied to the settings of all layers to ensure that every cell with value 0 maintained its value. 
+When rasterising the buildings layer, QGIS had set a NoData value of 0 to output bands, which resulted in only 66% of the area being outputted, as it excluded all area with a value of 0. The project's method relies on cells having a value of 0 or 1, constraint-free or constrained, respectively. Adding the constraints would produce the total number of all constraints present within that cell. If cells were given a NoData value, the raster calculator would have outputted a NoData value. To overcome this, a NoData value of -9999 was set, a value that lies outwith the datasets. This value was applied to the settings of all rasterised vector layers to ensure that every cell with value 0 maintained its value. 
 
 - Output data type: Float32.
 
@@ -79,6 +77,52 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 - CRS: EPSG: 27700 British National Grid.
 
 Following this, the merged DTM layer was used to obtain slope values using the 'slope' tool. The z factor was set to 1 as both the height and horizontal units (EPSG: 27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes ≤ 15° = 0, which was outputted to create a new layer, c_slope. When the new slope layer was compared with the OS basemap, a small white patch that corresponds to a steep sloped area was identifiable on the slope layer, which correlated with Loudon Hill on the OSM basemap.  
+
+
+The 'Raster Calculator' tool was used to add all raster layers together, to obtain a raster count for each 50m cell. The following expression was used:
+
+"c_buildings@1" + "c_peat@1" + "c_protected@1" + "c_roads@1" + "c_slope@1" + "c_water@1" + "c_woodland@1"
+
+
+Settings: 
+- Output extent: set to the study site 
+- Resolution: 400 columns by 400 rows
+- Output CRS: EPSG:27700, British National Grid in line with all other data and the output layer was saved as constraints_total
+
+
+- STATISTICS_MINIMUM=0
+- STATISTICS_MAXIMUM=5
+- STATISTICS_MEAN=2.1097
+- STATISTICS_STDDEV=0.97339786829437
+- STATISTICS_VALID_PERCENT=100
+
+The constraints_total layer had a range from 0 to 5. Statistics are shown in the table of all constraint layers statistics below. To check validity of the data, the sum of all means of the individual constraint layers were added up and the result matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. 
+
+- Cells per score (0 to 5): 
+
+Next, the number of cells at each score were counted using the Raster layer unique values report. 
+
+| "Layer" | "Rule" | "Min" | "Max" | "Valid (%)" | "Mean" | "% of study area " | "km2 (mean x 400)" |
+|---|---|---|---|---|---|---|---|
+| c_buildings | 500 m buffer | 0 | 1 | 100 | 0.66465624999999 | 0.66465624999999 | 265.862499999996 |
+| c_woodland | 136 m buffer | 0 | 1 | 100 | 0.59354374999999 | 0.59354374999999 | 237.417499999996 |
+| c_roads | Tiered: 375 / 250 / 0 m | 0 | 1 | 100 | 0.41016875 | 0.41016875 | 164.0675 |
+| c_water | 50 m buffer | 0 | 1 | 100 | 0.3161 | 0.3161 | 126.44 |
+| c_peat | Importance Classes 1 & 2 | 0 | 1 | 100 | 0.10195 | 0.10195 | 40.78 |
+| c_protected | No buffer, SSSI +SPA (no SACs in area) | 0 | 1 | 100 | 0.01995625 | 0.01995625 | 7.9825 |
+| c_slope | >15 degrees (excluded) | 0 | 1 | 100 | 0.003325 | 0.003325 | 1.33 |
+| Total |  |  |  |  | 2.10969999999998 |  |  |
+| Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) |  |  |
+
+Raster Count 				
+Value	Count	m2	km2	% of Study Area
+0	4211	10527500	10.5275	2.63
+1	41932	104830000	104.83	26.21
+2	59141	147852500	147.8525	36.96
+3	41758	104395000	104.395	26.10
+4	12726	31815000	31.815	7.95
+5	232	580000	0.58	0.15
+- Constraint-free area (km2): 10.53 km2 (2dp)
 
 ## Results
 ## Maps
@@ -92,7 +136,7 @@ This is a simplified, independent project, not a real planning or site assessmen
 - Woodland buffer: NatureScot recommended a 50 m clearance between blade tip and woodland, using a formula that included hub height, blade length and tree height (NatureScot, 2021). Instead, I measured it horizontally, adding the 50 m to the 86 m rotor radius, excluding hub and tree height. As a result, it is likely that my buffer is larger than the formula would have produced, therefore excluding usable land. This choice was made to keep the project straightforward and approach with caution.
 - Surface water buffer: A 50 m water buffer was used, based on recommendations by SEPA for an SP Energy Networks overhead line project (SP Energy Networks, 2023a). However, the project's final design used a 10 m buffer because the number of small watercourses and drains meant that the larger buffer wasn't able to be met, due to spacing requirements between towers (SP Energy Networks, 2023b). Therefore, the 50 m buffer likely excludes more land than a real-world project would use.
 - Building buffer: Since OpenMap Local did not give information on building use, all entries were treated equally and given the same buffer. Therefore, land that was usable may have been omitted as a result of the cautious approach. This could be improved by use of data that records building use, to exclude homes without a noise buffer.
-- OS Terrain 50 dataset: It is known to smooth terrain, which could result in some areas that are steeper than 15 degrees being identified as meeting the slope threshold. Steep sloped terrain such as Loudoun Hill were identified, however, smaller steep slopes could have been missed. 
+- OS Terrain 50 dataset: The dataset will give a more generalised view of the terrain as its designed to work with more small-scale products (Ordnance Survey, 2013). This could result in some areas that are steeper than 15 degrees being identified as meeting the slope threshold. Steep sloped terrain such as Loudoun Hill was identified, however, smaller steep slopes could have been missed. 
 
 ## Script
 ## Data Sources and Licences
@@ -109,6 +153,8 @@ This is a simplified, independent project, not a real planning or site assessmen
 
 Raw data is not included in the repository and can be downloaded from each provider.
 ## References
+
+Ordnance Survey (2013). OS terrain 50 user guide, version 1.0. Available at: https://digimap.edina.ac.uk/help/files/resource-hub/downloads/osmanuals/os-terrain-50-user-guide_v1.0.pdf (Accessed: 20th November 2026).
 
 NatureScot (2021). Bats and onshore wind turbines: survey assessment and mitigation. Available at: https://www.nature.scot/bats-and-onshore-wind-turbines-survey-assessment-and-mitigation#7.1.2%C2%A0+Buffers-01 (Accessed: 23rd October 2026).
 
