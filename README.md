@@ -101,21 +101,21 @@ The expression was outputted, with the result saved as a new layer called constr
 
 Statistics for each are displayed in the table below. To check validity of the data, the sum of all means of the individual constraint layers were added up and the result matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. 
 
-| Layer | Rule | Min | Max | Valid (%) | Mean | % of study area | km2 (mean x 400) |
+| Layer | Rule | Min | Max | Valid (%) | Mean | % of study area | km<sup>2</sup> (mean x 400) |
 |---|---|---|---|---|---|---|---|
 | c_buildings | 500 m buffer | 0 | 1 | 100 | 0.6647 | 66.47% | 265.86 |
 | c_woodland | 136 m buffer | 0 | 1 | 100 | 0.5935 | 59.35% | 237.42 |
 | c_roads | Tiered: 375 / 250 / 0 m | 0 | 1 | 100 | 0.4102 | 41.02% | 164.07 |
 | c_water | 50 m buffer | 0 | 1 | 100 | 0.3161 | 31.61% | 126.44 |
 | c_peat | Importance Classes 1 & 2 | 0 | 1 | 100 | 0.1020 | 10.20% | 40.78 |
-| c_protected | No buffer, SSSI +SPA (no SACs in area) | 0 | 1 | 100 | 0.0200 | 2.00% | 7.98 |
+| c_protected | No buffer, SSSI + SPA (no SACs in area) | 0 | 1 | 100 | 0.0200 | 2.00% | 7.98 |
 | c_slope | >15 degrees (excluded) | 0 | 1 | 100 | 0.0033 | 0.33% | 1.33 |
 | Total |  |  |  |  | 2.1097 | 0.00% | 0.00 |
 | Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) | | |
 
 Next, the number of cells at each score were counted using the Raster layer unique values report. The table below displays the distribution of cells across the number of constraints (0 to 5) per cell.
 
-| Value | Cell count | m2 | km2 | % of study area |
+| Value | Cell count | m<sup>2</sup> | km<sup>2</sup> | % of study area |
 |---|---|---|---|---|
 | 0 | 4211 | 10527500 | 10.53 | 2.63% |
 | 1 | 41932 | 104830000 | 104.83 | 26.21% |
