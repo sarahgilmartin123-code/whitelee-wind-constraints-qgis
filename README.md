@@ -78,8 +78,7 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 
 - CRS: EPSG: 27700 British National Grid.
 
-Following this, the merged DTM layer was used to obtain slope values using the 'slope' tool. The z value was set to 1 as both the height and horizontal units (EPSG: 27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes <15° = 0, which was outputted to create a new layer, c_slope.
-
+Following this, the merged DTM layer was used to obtain slope values using the 'slope' tool. The z value was set to 1 as both the height and horizontal units (EPSG: 27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes <15° = 0, which was outputted to create a new layer, c_slope. When the new slope layer was compared with the OS basemap, using the 'Identify' tool, a small white patch that corresponds to a steep sloped area, was identifiable on the slope layer, which correlated with Loudon Hill on the OSM basemap.  
 
 ## Results
 ## Maps
@@ -93,7 +92,7 @@ This is a simplified, independent project, not a real planning or site assessmen
 - Woodland buffer: NatureScot recommended a 50 m clearance between blade tip and woodland, using a formula that included hub height, blade length and tree height (NatureScot, 2021). Instead, I measured it horizontally, adding the 50 m to the 86 m rotor radius, excluding hub and tree height. As a result, it is likely that my buffer is larger than the formula would have produced, therefore excluding usable land. This choice was made to keep the project straightforward and approach with caution.
 - Surface water buffer: A 50 m water buffer was used, based on recommendations by SEPA for an SP Energy Networks overhead line project (SP Energy Networks, 2023a). However, the project's final design used a 10 m buffer because the number of small watercourses and drains meant that the larger buffer wasn't able to be met, due to spacing requirements between towers (SP Energy Networks, 2023b). Therefore, the 50 m buffer likely excludes more land than a real-world project would use.
 - Building buffer: Since OpenMap Local did not give information on building use, all entries were treated equally and given the same buffer. Therefore, land that was usable may have been omitted as a result of the cautious approach. This could be improved by use of data that records building use, to exclude homes without a noise buffer.
-- OS Terrain 50 dataset: It is known to smooth terrain, which could result in some areas that are steeper than 15 degrees being identified as meeting the slope threshold.  
+- OS Terrain 50 dataset: It is known to smooth terrain, which could result in some areas that are steeper than 15 degrees being identified as meeting the slope threshold. Steep sloped terrain such as Loudon Hill were identified, however, smaller steep slopes could have been missed. 
 
 ## Script
 ## Data Sources and Licences
