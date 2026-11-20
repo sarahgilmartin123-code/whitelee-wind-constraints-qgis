@@ -111,7 +111,7 @@ Statistics for each are displayed in the table below. To check validity of the d
 | c_protected | No buffer, SSSI +SPA (no SACs in area) | 0 | 1 | 100 | 0.0200 | 2.00% | 7.98 |
 | c_slope | >15 degrees (excluded) | 0 | 1 | 100 | 0.0033 | 0.33% | 1.33 |
 | Total |  |  |  |  | 2.1097 | 0.00% | 0.00 |
-| Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) | 0.00% | 0.00 |
+| Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) | | |
 
 Next, the number of cells at each score were counted using the Raster layer unique values report. The table below displays the distribution of cells across the number of constraints (0 to 5) per cell.
 
