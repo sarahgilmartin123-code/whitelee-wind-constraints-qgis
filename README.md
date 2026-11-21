@@ -136,11 +136,11 @@ The calculator added the number of constraints present for each cell within the 
 
 A unique values report was produced from constraints_total, which is displayed in the results. The layer symbology was improved for readability by using 'palette/unique values' to display each value with a distinct, identifiable colour. A map was produced using this layer to display the extent of overlapping constraints across the study area.
  
-![constraints_total raster](screenshots_step2_constraints_total.jpg)
+ ![constraints_total raster](screenshots_step2_constraints_total.jpg)
 
 *DESCRIPTION. Data credits: see Data Sources and Licenses table. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
-![Unique values report for constraints_total](screenshots/step3_unique_values.jpg)
+![Unique values report for constraints_total](screenshots_step3_unique_values.jpg)
 
 *DESCRIPTION*
 
