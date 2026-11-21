@@ -58,9 +58,7 @@ Each vector layer was rasterised using the 'Rasterise (Vector to Raster)' tool. 
 
 - A fixed value to burn: 1. 
 
-- Output extent: Easting 246,000 – 266,000 m and Northing 634,000 – 654,000 m.
-
-The output extent was set to that of the study area. 
+- Output extent: Easting 246,000 – 266,000 m and Northing 634,000 – 654,000 m (study area extent). 
 
 - Width and Height resolution: 50 x 50 m.
 
@@ -98,9 +96,16 @@ The constraint-free areas were identified using the 'Raster Calculator' tool on 
 
 "constraints_total@1" = 0
 
-The expression gives any constraint-free features (DN=0) a value of 1, and the rest are constrained areas given a value of 0 (DN values other than 0). The new raster layer was saved as constraint_free and the statistics were inspected. The mean value of 0.0263 matched with the same value given in the unique values table previously, where the percentage of the study area covered was 2.63%.
+The calculator added the number of constraints present for each cell within the study area. From this, a new raster layer was saved as 'constraint_free', with the values presented in the table below. The statistics were inspected, with the mean value of 0.0263 matched with the same value given in the unique values table previously, where the percentage of the study area covered was 2.63%.
 
-Following this, the layer was converted into polygons using the 'Polygonize' tool. The new vector layer was outputted and saved as constraint_free_areas, and the attribute table was inspected. The layer comprised 254 features, 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. This suggests the usable land consists of many small patches, in contrast to the unusable land. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
+Following this, the layer was converted into polygons using the 'Polygonize' tool. For settings: 
+
+- Input: 'constraint_free.tif'
+- Output: 'constraint_free_areas.gpkg'
+- Eight-connectedness: False; 4-connectedness was used, which only uses patches that meet at corners, and can also minimise the likelihood of overstating site sizes.
+- Field: DN 
+  
+Upon inspection of the attribute table, the new layer comprised 254 features, of which 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. This suggests the usable land consists of many small patches, in contrast to the unusable land. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
 
 
 
