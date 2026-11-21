@@ -34,7 +34,7 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 | OpenStreetMap Turbines | study area (Clip) | Reprojected to EPSG:27700, then clipped |
 | Landscape Character Assessment | study area (Clip) | Added 'Area_km<sup>2</sup>' and 'LCT_Group' fields |
 
-! [Clipped datasets in QGIS] (screenshots/step1_clipped_data.jpg)
+![Clipped datasets in QGIS](screenshots/step1_clipped_data.jpg)
 
 ### 3. Constraint criteria
 Maximum proposed turbine dimensions were selected from the Whitelee Repowering Scoping Report (ScottishPower Renewables, 2026).
@@ -76,33 +76,33 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 
 - CRS: EPSG:27700 British National Grid.
 
-![Rasterise settings, top of dialog] (screenshots/step2_rasterise_settings2.jpg)
+![Rasterise settings, top of dialog](screenshots/step2_rasterise_settings2.jpg)
 
-![Rasterise settings, bottom of dialog] (screenshots/step2_rasterise_settings1.jpg)
+![Rasterise settings, bottom of dialog](screenshots/step2_rasterise_settings1.jpg)
 
 DESCRIPTION
 
-![c_buildings constraint raster] (screenshots/step2_c_buildings.jpg)
+![c_buildings constraint raster](screenshots/step2_c_buildings.jpg)
 
 DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
-![c_woodland constraint raster] (screenshots/step2_c_woodland.jpg)
+![c_woodland constraint raster](screenshots/step2_c_woodland.jpg)
 
 DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
-![c_roads constraint raster] (screenshots/step2_c_roads.jpg)
+![c_roads constraint raster](screenshots/step2_c_roads.jpg)
 
 DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
-![c_water constraint raster] (screenshots/step2_c_water.jpg)
+![c_water constraint raster](screenshots/step2_c_water.jpg)
 
 DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
-![c_peat constraint raster] (screenshots/step2_c_peat.jpg)
+![c_peat constraint raster](screenshots/step2_c_peat.jpg)
 
 DESCRIPTION. Carbon and Peatland 2016 map, © SNH and JHI. Map produced by SNH using data from the James Hutton Institute, used with permission, all rights reserved. UK Non-Commercial Government Licence v2.0. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
-![c_protected constraint raster] (screenshots/step2_c_protected.jpg)
+![c_protected constraint raster](screenshots/step2_c_protected.jpg)
 
 DESCRIPTION. Protected Areas: SSSIs, SPAs, SACs (Copyright Scottish Natural Heritage). Contains OS data Basemap © Crown copyright and database right (2022,2023). Available under the Open Government Licence v3.0. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
