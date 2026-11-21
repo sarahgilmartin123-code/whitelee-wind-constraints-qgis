@@ -87,7 +87,7 @@ Settings:
 - Resolution: 400 columns by 400 rows
 - Output CRS: EPSG:27700, British National Grid
 
-The output was saved as a new layer, called constraints_total. To check validity of the data, the sum of all means of the individual constraint layers was matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. The statistics list produced from constraints_total showed that the layer had 100% valid cells, which demonstrated the NoData value used worked.
+The calculator added the number of constraints present for each cell within the study area. The output was saved as a new layer, called constraints_total. To check validity of the data, the sum of all means of the individual constraint layers was matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. The statistics list produced from constraints_total showed that the layer had 100% valid cells, which demonstrated the NoData value used worked.
 
 A unique values report was produced from constraints_total, which is displayed in the results. The layer symbology was improved for readability by using 'palette/unique values' to display each value with a distinct, identifiable colour. A map was produced using this layer to display the extent of overlapping constraints across the study area.
  
@@ -96,13 +96,15 @@ The constraint-free areas were identified using the 'Raster Calculator' tool on 
 
 "constraints_total@1" = 0
 
-The calculator added the number of constraints present for each cell within the study area. From this, a new raster layer was saved as 'constraint_free', with the values presented in the table below. The statistics were inspected, with the mean value of 0.0263 matched with the same value given in the unique values table previously, where the percentage of the study area covered was 2.63%.
+A new layer was created from this, called 'constraint_free.tif'. The statistics were inspected, with the mean value of 0.0263 matched with the same value given in the unique values table previously, where the percentage of the study area covered was 2.63%.
 
-Following this, the layer was converted into polygons using the 'Polygonize' tool. For settings: 
+Following this, the layer was converted into polygons using the 'Polygonize' tool.
+
+Settings: 
 
 - Input: 'constraint_free.tif'
 - Output: 'constraint_free_areas.gpkg'
-- Eight-connectedness: False; 4-connectedness was used, which only uses patches that meet at corners, and can also minimise the likelihood of overstating site sizes.
+- Eight-connectedness: False; 4-connectedness was used, which groups those cells that share an edge, and can also minimise the likelihood of overstating site sizes.
 - Field: DN 
   
 Upon inspection of the attribute table, the new layer comprised 254 features, of which 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. This suggests the usable land consists of many small patches, in contrast to the unusable land. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
