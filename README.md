@@ -96,7 +96,7 @@ The constraint-free areas were identified using the 'Raster Calculator' tool on 
 
 "constraints_total@1" = 0
 
-Cells with a count = 0, constraint-free, were given a value of 1, whereas cells with a count ≥ 1, constrained, were given a value of 0. A new layer was created from this, called 'constraint_free.tif' and the statistics were inspected. The mean value of 0.0263 matched the value given in the unique values table previously, in the results section, where the percentage of the study area covered was 2.63%.
+Cells with a count = 0 (constraint-free) were given a value of 1, whereas cells with a count ≥ 1 (constrained) were given a value of 0. A new layer was created from this, called 'constraint_free.tif' and the statistics were inspected. The mean value of 0.0263 matched the value given in the unique values table, in the results section, where the percentage of the study area covered was 2.63%.
 
 Following this, the layer was converted into polygons using the 'Polygonize' tool.
 
@@ -104,7 +104,7 @@ Settings:
 
 - Input: 'constraint_free.tif'
 - Output: 'constraint_free_areas.gpkg'
-- Eight-connectedness: False; 4-connectedness was used, grouping cells that share an edge whilst excluding those that meet only at corners. It can also minimise the likelihood of overstating site sizes.
+- Eight-connectedness: False; 4-connectedness was used, grouping cells that share an edge whilst separating those that meet only at corners. It can also minimise the likelihood of overstating site sizes.
 - Field: DN 
   
 Upon inspection of the attribute table, the new layer comprised 254 features, of which 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
@@ -129,7 +129,7 @@ Statistics for each constraint raster layer are displayed in the table below.
 
 Next, the number of cells at each score was counted using the Raster layer unique values report. The table below displays the distribution of cells across the number of constraints (0 to 5) per cell.
 
-This suggests the usable land consists of many small patches, in contrast to the unusable land. 
+
 
 | Value | Cell count | m<sup>2</sup> | km<sup>2</sup> | % of study area |
 |---|---|---|---|---|
@@ -139,6 +139,11 @@ This suggests the usable land consists of many small patches, in contrast to the
 | 3 | 41758 | 104395000 | 104.40 | 26.10% |
 | 4 | 12726 | 31815000 | 31.82 | 7.95% |
 | 5 | 232 | 580000 | 0.58 | 0.15% |
+
+
+
+
+This suggests the usable land consists of many small patches, in contrast to the unusable land. 
 
 ## Maps
 1. Interactive web map 1. Extent of locational constraints at Whitelee. Link: https://arcg.is/9LvW02
