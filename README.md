@@ -36,7 +36,10 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 
 ![Clipped datasets in QGIS](screenshots/step1_clipped_data.jpg)
 
+*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+
 ### 3. Constraint criteria
+
 Maximum proposed turbine dimensions were selected from the Whitelee Repowering Scoping Report (ScottishPower Renewables, 2026).
 - Hub height: 164 m
 - Rotor radius: 86 m 
@@ -53,6 +56,7 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 | Peat | Importance Classes 1 & 2 | No buffer. Filtered to only include importance classes 1 and 2, regarded as land dominated by rich peat soil and peatland habitats (NatureScot, 2026; Scottish Government, Scottish Natural Heritage, SEPA, 2017). |
 | Protected areas | No buffer, SSSI + SPA (no SACs in area) | No buffer; excluded where present, precautionary screen (Scottish Government, 2023). |
 | Slope | Steeper than 15°  | No buffer; excluded slopes steeper than 15 degrees, based on Welsh Government guidance (Welsh Assembly Government, 2005, Annex D, p. 58).  |
+
 
 ### 4. Combining the constraints
 
@@ -80,34 +84,38 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 
 ![Rasterise settings, bottom of dialog](screenshots/step2_rasterise_settings1.jpg)
 
-DESCRIPTION
+*DESCRIPTION*
 
 ![c_buildings constraint raster](screenshots/step2_c_buildings.jpg)
 
-DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_woodland constraint raster](screenshots/step2_c_woodland.jpg)
 
-DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_roads constraint raster](screenshots/step2_c_roads.jpg)
 
-DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_water constraint raster](screenshots/step2_c_water.jpg)
 
-DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_peat constraint raster](screenshots/step2_c_peat.jpg)
 
-DESCRIPTION. Carbon and Peatland 2016 map, © SNH and JHI. Map produced by SNH using data from the James Hutton Institute, used with permission, all rights reserved. UK Non-Commercial Government Licence v2.0. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*DESCRIPTION. Carbon and Peatland 2016 map, © SNH and JHI. Map produced by SNH using data from the James Hutton Institute, used with permission, all rights reserved. UK Non-Commercial Government Licence v2.0. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_protected constraint raster](screenshots/step2_c_protected.jpg)
 
-DESCRIPTION. Protected Areas: SSSIs, SPAs, SACs (Copyright Scottish Natural Heritage). Contains OS data Basemap © Crown copyright and database right (2022,2023). Available under the Open Government Licence v3.0. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*DESCRIPTION. Protected Areas: SSSIs, SPAs, SACs (Copyright Scottish Natural Heritage). Contains OS data © Crown copyright and database right (2022, 2023). Available under the Open Government Licence v3.0. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 
 Following this, the merged DTM layer was used to obtain slope values using the 'Slope' tool. The Z factor was set to 1 as both the height and horizontal units (EPSG:27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes ≤ 15° = 0, which was outputted to create a new layer, c_slope. When the new slope layer was compared with the OSM basemap, a small white patch that corresponds to a steep sloped area was identifiable on the slope layer, which correlated with Loudoun Hill on the basemap.  
+
+![s_slope constraint raster](screenshots/step2_c_slope.jpg)
+
+*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 
 The 'Raster Calculator' tool was used to add all raster layers together, to obtain a raster count for each 50 m cell. The following expression was used:
@@ -120,10 +128,21 @@ Settings:
 - Resolution: 400 columns by 400 rows
 - Output CRS: EPSG:27700, British National Grid
 
+![Raster Calculator sum expression](screenshots/step3_raster_calculator.jpg)
+
+*DESCRIPTION*.
+
 The calculator added the number of constraints present for each cell within the study area. The output was saved as a new layer, called constraints_total. To check validity of the data, the sum of all means of the individual constraint layers was matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. The statistics list produced from constraints_total showed that the layer had 100% valid cells, which demonstrated the NoData value used worked.
 
 A unique values report was produced from constraints_total, which is displayed in the results. The layer symbology was improved for readability by using 'palette/unique values' to display each value with a distinct, identifiable colour. A map was produced using this layer to display the extent of overlapping constraints across the study area.
  
+![constraints_total raster](screenshots_step2_constraints_total.jpg)
+
+*DESCRIPTION. Data credits: see Data Sources and Licenses table. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+
+![Unique values report for constraints_total](screenshots/step3_unique_values.jpg)
+
+*DESCRIPTION*
 
 The constraint-free areas were identified using the 'Raster Calculator' tool on the constraints_total layer, with the following expression:
 
@@ -139,7 +158,11 @@ Settings:
 - Output: 'constraint_free_areas.gpkg'
 - Eight-connectedness: False; 4-connectedness was used, grouping cells that share an edge whilst separating those that meet only at corners. It can also minimise the likelihood of overstating site sizes.
 - Field: DN 
-  
+
+![Polygonize settings](screenshots/step3_polygonize.jpg)
+
+*DESCRIPTION*
+
 Upon inspection of the attribute table, the new layer comprised 254 features, of which 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
 
 
@@ -192,6 +215,12 @@ This is a simplified, independent project, not a real planning or site assessmen
 - OS Terrain 50 dataset: The dataset will give a more generalised view of the terrain as its designed to work with more small-scale products (Ordnance Survey, 2013). This could result in some areas that are steeper than 15 degrees being identified as meeting the slope threshold. Steep sloped terrain such as Loudoun Hill was identified, however, smaller steep slopes could have been missed. 
 
 ## Script
+Below is a screenshot of the python script created to produce site summary statistics, including largest site, a 2.49km2 minimum site size test and existing turbines on constraint-free land.
+
+![site_summary.py output in the QGIS Python Console](screenshots/step4_python_analysis_final.jpg)
+
+*DESCRIPTION*
+
 ## Data Sources and Licences
 
 | Dataset | Provider | Acknowledgement | Licence | Use |
