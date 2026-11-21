@@ -107,7 +107,7 @@ Settings:
 - Eight-connectedness: False; 4-connectedness was used, which groups those cells that share an edge, and can also minimise the likelihood of overstating site sizes.
 - Field: DN 
   
-Upon inspection of the attribute table, the new layer comprised 254 features, of which 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. This suggests the usable land consists of many small patches, in contrast to the unusable land. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
+Upon inspection of the attribute table, the new layer comprised 254 features, of which 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
 
 
 
