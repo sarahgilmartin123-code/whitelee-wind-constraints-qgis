@@ -36,8 +36,7 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 
 ![Clipped datasets in QGIS](screenshots/step1_clipped_data.jpg)
 
-*Screenshot displaying the newly clipped constraint layers alongside the study area, its 1 km buffer and the OSM basemap layers.Data credits: see Data Sources and Licences table. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
-Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot displaying the newly clipped constraint layers alongside the study area, its 1 km buffer and the OSM basemap layers.Data credits: see Data Sources and Licences table.Contains OS data © Crown copyright and database right 2026.Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ### 3. Constraint criteria
 
@@ -166,17 +165,18 @@ Settings:
 
 Upon inspection of the attribute table, the new layer comprised 254 features, of which 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
 
+### 5. Site summary statistics
 
-Following this, Python was used to automate summary statistics for the study area, allowing the efficient re-running if anything needed changed. The script was run in the Python Console in QGIS (PyQGIS) and two layers were used: the polygonised constraint free areas layer ('constraint_free_areas') and the clipped OSM turbines layer (turbines_study_area). The script file was saved as site_summary.py. 
+Following this, Python was used to automate summary statistics for the study area, allowing the efficient re-running if anything needed to be changed. The script was run in the Python Console in QGIS (PyQGIS) and two layers were used: the polygonised constraint free areas layer ('constraint_free_areas') and the clipped OSM turbines layer (turbines_study_area). The script file was saved as site_summary.py : [site_summary.py](scripts/site_summary.py). 
 
-1. Two fixed values were used, the area of the study are in km<sup>2</sup>, and the 2.49 km<sup>2</sup> minimum site size, which were both stored as 'variables' in the script.
-2. The script counted the number of polygons in 'constraint_free_areas' layer and counted the number of existing turbines in 'turbines_study_area" using their feature count from the getFeatures() function in PyQGIS.
-3. Ran a 'for loop' and 'if statements' through the polygons in 'constraint_free_areas', which identified those where DN == 1, of which, it quantified the polygon's area in km<sup>2</sup>. It then added them together for those who met the conditions, of which it ran a second 'if statement', which identified and counted those who had an area of at least 2.49 km<sup>2</sup>, then ran a third 'if statement' to identify the polygon with the largest area value in km<sup>2</sup>.
-4. Quantified the perecentage of the study area that was constraint-free using the total area of those patches where DN == 0 and divided that by the study area in km<sup>2</sup>, multiplied by 100.
-5. Counted the number of existing turbines within constraint-free areas. This was achieved by running a 'for loop' once again, using a 'loop inside a loop', which was run through turbines in the 'turbines_study_area' layer and for polygons in 'constraint_free_areas'. The conditions of the 'for loop' included those where DN == 1 and those polygons contained a turbine. Each time the loop was run, it stored a running total of the number of turbines on constraint-free land, which produced the final value. This number was then divided by the total number of existing turbines within the study area and multiplied by 100 to obtain a percentage. This value was converted to 2 decimal places.
-6. An 'F-string' was used to print the final values for each output inserted within a statement to improve readability of what those outputs were associated with.
+1. Two fixed values were used, the area of the study area in km<sup>2</sup>, and the 2.49 km<sup>2</sup> minimum site size, which were both stored as 'variables' in the script.
+2. The script counted the number of polygons in 'constraint_free_areas' layer and counted the number of existing turbines in 'turbines_study_area' using their feature count from the 'featureCount()' function in PyQGIS.
+3. Ran a 'for loop' and 'if statements' through the polygons in 'constraint_free_areas'. The 'if statement' was used to identify polygons where DN == 1, of which, it quantified the polygon's area in km<sup>2</sup> by dividing the area by 1000000, as the layers units are in metres as the coordinate system was British National Grid. It then added them together for those that met the conditions, of which it ran a second 'if statement', which identified and counted those that had an area of at least 2.49 km<sup>2</sup>, then ran a third 'if statement' to identify the polygon with the largest area value in km<sup>2</sup>.
+4. Quantified the percentage of the study area that was constraint-free using the total area of those patches where DN == 1 and divided that by the study area in km<sup>2</sup>, multiplied by 100.
+5. Counted the number of existing turbines within constraint-free areas. This was achieved by running a 'for loop' once again, using a 'loop inside a loop', which was run through turbines in the 'turbines_study_area' layer and for polygons in 'constraint_free_areas', and used 'getFeatures()' to go through them one at a time. The conditions of the 'if statement's' inside the 'for loop' included those where DN == 1 and those polygons contained a turbine. Each time a turbine was found inside a constraint-free area, the script stored a running total of the number of turbines on constraint-free land, which produced the final value. This number was then divided by the total number of existing turbines within the study area and multiplied by 100 to obtain a percentage. This value was rounded to 2 decimal places. 
+6. An 'f-string' was used to print the final values for each output inserted within a statement to improve readability of what those outputs were associated with.
 
-The scripts output was checked alongside other outputs, with the Python scripts output of 2.63% for the percentage of constraint-free area within the study site matching the mean of the constraint free raster, 0.0263. The number of constraint-free polygons printed from the script, 249, matched the attribute table. The output of the script can be viewed in the 'Results' section below, and the script is viewable in the 'Scripts' section. 
+The script output was checked alongside other outputs, with the Python script's output of 2.63% for the percentage of constraint-free area within the study site matching the mean of the constraint-free raster, 0.0263. The number of constraint-free polygons printed from the script, 249, matched the attribute table. The output of the script can be viewed in the 'Results' section below, and the script is viewable in the 'Scripts' section. 
 
 
 ## Results
@@ -228,7 +228,7 @@ This is a simplified, independent project, not a real planning or site assessmen
 
 ## Script
 
-A Python script was created to automate summary statistics for the study area, including the largest site, a 2.49km<sup>2</sup> minimum site size test and existing turbines on constraint-free land.
+A Python script was created to automate summary statistics for the study area, including the largest site, a 2.49 km<sup>2</sup> minimum site size test and existing turbines on constraint-free land.
 
 ![site_summary.py output in the QGIS Python Console](screenshots/step4_python_analysis_final.jpg)
 
