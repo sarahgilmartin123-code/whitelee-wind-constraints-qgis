@@ -85,7 +85,7 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 
 ![Rasterise settings, bottom of dialog](screenshots/step2_rasterise_settings1.jpg)
 
-*Screenshot of the 'Rasterise' settings used to convert vector constraint layers into a raster format, in this case, the tiered roads buffer layer.*
+*Screenshot of the 'Rasterize (Vector to Raster)' settings used to convert vector constraint layers into a raster format, in this case, the tiered roads buffer layer.*
 
 ![c_buildings constraint raster](screenshots/step2_c_buildings.jpg)
 
@@ -93,7 +93,7 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 
 ![c_woodland constraint raster](screenshots/step2_c_woodland.jpg)
 
-*Screenshot of the woodlands constraint raster, showing areas free of this constraint and those within 136 m of woodland. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot of the woodland constraint raster, showing areas free of this constraint and those within 136 m of woodland. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_roads constraint raster](screenshots/step2_c_roads.jpg)
 
@@ -167,13 +167,15 @@ Settings:
 Upon inspection of the attribute table, the new layer comprised 254 features, of which 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
 
 
-Following this, PyQGIS was used to automate summary statistics for the study area. 
+Following this, Python was used to automate summary statistics for the study area, allowing the efficient re-running if anything needed changed. The script was run in the Python Console in QGIS (PyQGIS) and two layers were used: the polygonised constraint free areas layer ('constraint_Free_areas') and the clipped OSM turbines layer (turbines_study_area). The script file was saved as site_summary.py. 
 
-1. First, I printed the total number of polygons in the 'constraint_free_areas' vector layer by storing the layer as a variable in Python with the same name and printing the feature count.
-2. Then, I identified the number of existing turbines within the study area and stored them in a variable called 'turbines_study_area', which was printed. This was achieved by printing the feature count of the clipped turbines study area layer.  
-3. I stored the site size area as a variable in python; study_area_km2, to be used later.
-4. I created a loop for constraint-free polygons to print those where DN=1 (using the constraint_free_areas' vector layer). I created three new variables, 'tot_area_km2', 'site_count' and largest_Area_km2, and had them store a value of 0.
-5. If the loop found polygons whose DN value == 1, it produced the area of the polygon in km<sup>2</sup>. Following this, the loop added together the polygon's who met these conditions and 
+1. Two fixed values were used, the area of the study are in km<sup>2</sup>, and the 2.49 km<sup>2</sup> minimum site size, which were both stored as variables in the script.
+2. The script counted the number of polygons in 'constraint_free_areas' layer and counted the number of existing turbines in 'tuebines_study_area" using their feature count.
+3. Ran a loop through the polygons in 'constraint_free_Areas', which identified those where DN == 1, of which, it quantified the polygon's area in km<sup>2</sup>. It then added them together for those who met the conditions, identified and counted those who had an area of at least 2.49 km<sup>2</sup>, and identified the polygon with the largest area value.
+4. Quantified the perecentage of the study area that was constraint-free using the total area of those patches where DN == 0 and divided that by the study area in km2, multiplied by 100.
+5. Counted the number of existing turbines within constraint-free areas. This was achieved by running a for loop once again, which was run through turbines in the 'turbines_study_Area' layer and for polygons in 'constraint_free_areas'. The conditions of the for loop included those where DN == 1 and those polygons contained a turbine. Each time the loop was run, it stored a running total of the number of turbines on constraint-free land, which produced the final value. This number was then divided by the total number of existing turbines within the study area and multiplied by 100 to obtain a percentage. This value was converted to 2 decimal places. 
+
+
 
 ## Results
 
