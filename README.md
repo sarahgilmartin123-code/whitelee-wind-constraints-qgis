@@ -49,8 +49,8 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 - Tip height: 250 m
 
 Other assumptions:
-- ScottishPower Generation Capacity: 1,000 MW
-- Number of turbines: 124
+- ScottishPower Generation Capacity: 1,000 MW (ScottishPower Renewables, 2026)
+- Number of turbines: 124 (ScottishPower Renewables, 2026)
 - Minimum Threshold for Major Development: 20 MW (Town and Country Planning, Hierarchy of Developments (Scotland) Regulations, 2009)
 
 
@@ -186,11 +186,11 @@ The table below shows how the minimum site size was calculated.
 | Rotor diameter (m) | 172 | ScottishPower Renewables (2026) |
 | Spacing between rows  | 7 rotor diameters (1,204 m) | Gupta (2016, Fig. 5) gives 5 to 9 rotor diameters, of which I chose the midpoint value of the range; 7 x 172 = 1,204 m. |
 | Spacing within a row | 4 rotor diameters (688 m) | Gupta (2016, Fig. 5) gives 3 to 5 rotor diameters, of which I used the midpoint value of the range; 4 x 172 = 688 m. |
-| Land per Turbine (km<sup>2</sup>) | 0.83 | Calculated: (spacing between rows (m) / spacing within a row (km2))/1000000|
+| Land per Turbine (km<sup>2</sup>) | 0.83 | Calculated: (spacing between rows (m) * spacing within a row (km<sup>2</sup>))/1000000 = 0.83|
 | Minimum Windfarm Size: Planning Threshold for Major Development (MW) | 20 | Town and Country Planning (Hierarchy of Developments) (Scotland) Regulations (2009) |
 | Avg. Capacity per Turbine (MW) | 8.06 | Calculated: 1,000 MW / 124 turbines (ScottishPower Renewables, 2026) |
-| No. Turbines per Site (rounded up) | 3 | Calculated:20MW threshold / 8.06 MW = 2.48, rounded up to 3 because part of a turbine cant be built and 2 would only give 16MW. |
-| Minimum Site Size (km<sup>2</sup>; 2dp) | 2.49 | Calculated: Number of turbines per site (rounded) * land per turbine (km<sup>2</sup>)|
+| No. Turbines per Site (rounded up) | 3 | Calculated: 20 MW threshold / 8.06 MW = 2.48, rounded up to 3 because part of a turbine can't be built and 2 would only give 16MW. |
+| Minimum Site Size (km<sup>2</sup>; 2dp) | 2.49 | Calculated: Number of turbines per site (rounded) * land per turbine (km<sup>2</sup>) = 3 * 0.83 km<sup>2</sup> = 2.49 km<sup>2</sup> |
 
 Values were rounded to 2 decimal places. 
 
@@ -278,7 +278,7 @@ A Python script was created to automate summary statistics for the study area, i
 Raw data is not included in the repository and can be downloaded from each provider.
 ## References
 
-Gupta, N., 2016. 'A review on the inclusion of wind generation in power system studies'. *Renewable and sustainable energy reviews, 59, pp.530-543.* 
+Gupta, N. (2016). 'A review on the inclusion of wind generation in power system studies'. *Renewable and sustainable energy reviews, 59, pp.530-543.* 
 
 Ordnance Survey (2013). OS terrain 50 user guide, version 1.0. Available at: https://digimap.edina.ac.uk/help/files/resource-hub/downloads/osmanuals/os-terrain-50-user-guide_v1.0.pdf (Accessed: 20th November 2026).
 
@@ -306,7 +306,7 @@ Reinforcement Project: Environmental Impact Assessment Report, Volume 4. Availab
 SP Energy Networks (2023b). The Glenmuckloch to Glenglass
 Reinforcement Project: Environmental Impact Assessment Report: Non-Technical Summary. January 2023. Available at: https://www.spenergynetworks.co.uk/userfiles/file/EIA_Report_Non-Technical_Summary.pdf (Accessed: 23rd October 2026).
 
-Town and Country Planning (20119). Hierarchy of Developments (Scotland) Regulations 2009, SSI 2009/51. Available at: https://www.legislation.gov.uk/ssi/2009/51/schedule/made?view=plain (Accessed: 27th October 2026)
+Town and Country Planning (2009) Hierarchy of Developments (Scotland) Regulations 2009, SSI 2009/51. Available at: https://www.legislation.gov.uk/ssi/2009/51/schedule/made?view=plain (Accessed: 27th October 2026)
 
 Traffic Scotland (n.d.). Trunk road network. Available at: https://www.traffic.gov.scot/trunk-roads (Accessed: 24th October 2026).
 
