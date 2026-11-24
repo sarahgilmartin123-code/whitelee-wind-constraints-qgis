@@ -23,6 +23,8 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 
 ### 2. Data Preparation
 
+The table below displays the datasets used and how each was prepared.
+
 | Dataset | Clipped to (tool) | Other preparation |
 |---|---|---|
 | Study Area | Easting 246,000 - 266,000, Northing 634,000 - 654,000  | Buffered layer to create new 1 km buffer boundary surrounding the study area to avoid edge effects |
