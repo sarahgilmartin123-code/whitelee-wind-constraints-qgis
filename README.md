@@ -306,6 +306,8 @@ Reinforcement Project: Environmental Impact Assessment Report, Volume 4. Availab
 SP Energy Networks (2023b). The Glenmuckloch to Glenglass
 Reinforcement Project: Environmental Impact Assessment Report: Non-Technical Summary. January 2023. Available at: https://www.spenergynetworks.co.uk/userfiles/file/EIA_Report_Non-Technical_Summary.pdf (Accessed: 23rd October 2026).
 
+Town and Country Planning (20119). Hierarchy of Developments (Scotland) Regulations 2009, SSI 2009/51. Available at: https://www.legislation.gov.uk/ssi/2009/51/schedule/made?view=plain (Accessed: 27th October 2026)
+
 Traffic Scotland (n.d.). Trunk road network. Available at: https://www.traffic.gov.scot/trunk-roads (Accessed: 24th October 2026).
 
 Transport Scotland (2013). Consultation on East Lothian Guidance for wind farms over twelve megawatts [letter to East Lothian Council, 17/05/2013]. Available at: https://eastlothianconsultations.co.uk/housing-environment/12mw_wind_spg/results/response-transport-scotland_redacted.pdf (Accessed: 23rd October 2026).
