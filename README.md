@@ -278,6 +278,8 @@ A Python script was created to automate summary statistics for the study area, i
 Raw data is not included in the repository and can be downloaded from each provider.
 ## References
 
+Gupta, N., 2016. 'A review on the inclusion of wind generation in power system studies'. *Renewable and sustainable energy reviews, 59, pp.530-543.* 
+
 Ordnance Survey (2013). OS terrain 50 user guide, version 1.0. Available at: https://digimap.edina.ac.uk/help/files/resource-hub/downloads/osmanuals/os-terrain-50-user-guide_v1.0.pdf (Accessed: 20th November 2026).
 
 NatureScot (2021). Bats and onshore wind turbines: survey assessment and mitigation. Available at: https://www.nature.scot/bats-and-onshore-wind-turbines-survey-assessment-and-mitigation#7.1.2%C2%A0+Buffers-01 (Accessed: 23rd October 2026).
