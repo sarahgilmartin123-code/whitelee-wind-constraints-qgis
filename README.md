@@ -36,7 +36,7 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 
 ![Clipped datasets in QGIS](screenshots/step1_clipped_data.jpg)
 
-*Screenshot displaying the newly clipped constraint layers alongside the study area, its 1 km buffer and the OSM basemap layers.  Data credits: see Data Sources and Licences table. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot displaying the newly clipped constraint layers alongside the study area, its 1 km buffer and the OSM basemap layers.Data credits: see Data Sources and Licences table. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ### 3. Constraint criteria
