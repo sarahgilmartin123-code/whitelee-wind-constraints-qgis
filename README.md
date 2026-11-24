@@ -36,7 +36,7 @@ Open data was combined in QGIS to create a locational constraint layer to identi
 
 ![Clipped datasets in QGIS](screenshots/step1_clipped_data.jpg)
 
-*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot displaying the newly clipped constraint layers alongside the study area, its 1km buffer and the OSM basemap layers. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ### 3. Constraint criteria
 
@@ -84,11 +84,11 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 
 ![Rasterise settings, bottom of dialog](screenshots/step2_rasterise_settings1.jpg)
 
-*DESCRIPTION*
+*Screenshot of the 'Rasterise' settings used to convert vector constraint layers into a raster format, in this case, the tiered roads buffer layer.*
 
 ![c_buildings constraint raster](screenshots/step2_c_buildings.jpg)
 
-*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot of the buildings constraint raster. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_woodland constraint raster](screenshots/step2_c_woodland.jpg)
 
@@ -96,26 +96,26 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 
 ![c_roads constraint raster](screenshots/step2_c_roads.jpg)
 
-*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot of the roads constraint raster, displaying areas free of this constraint and those within 250/375 m of Minor/Major Roads. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_water constraint raster](screenshots/step2_c_water.jpg)
 
-*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot of the surface water constraint raster, displaying areas free of this constraint, and those found within 50 m of a watercourse. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_peat constraint raster](screenshots/step2_c_peat.jpg)
 
-*DESCRIPTION. Carbon and Peatland 2016 map, © SNH and JHI. Map produced by SNH using data from the James Hutton Institute, used with permission, all rights reserved. UK Non-Commercial Government Licence v2.0. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot of the peat constraint raster, showing areas with no peatland of classes 1 or 2, and those areas containing peat classes 1 or 2. Carbon and Peatland 2016 map, © SNH and JHI. Map produced by SNH using data from the James Hutton Institute, used with permission, all rights reserved. UK Non-Commercial Government Licence v2.0. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_protected constraint raster](screenshots/step2_c_protected.jpg)
 
-*DESCRIPTION. Protected Areas: SSSIs, SPAs, SACs (Copyright Scottish Natural Heritage). Contains OS data © Crown copyright and database right (2022, 2023). Available under the Open Government Licence v3.0. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot of the protect areas constraint raster, showing those free of protected areas alongside those that contain a protected area. Protected Areas: SSSIs, SPAs, SACs (Copyright Scottish Natural Heritage). Contains OS data © Crown copyright and database right (2022, 2023). Available under the Open Government Licence v3.0. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 
 Following this, the merged DTM layer was used to obtain slope values using the 'Slope' tool. The Z factor was set to 1 as both the height and horizontal units (EPSG:27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes ≤ 15° = 0, which was outputted to create a new layer, c_slope. When the new slope layer was compared with the OSM basemap, a small white patch that corresponds to a steep sloped area was identifiable on the slope layer, which correlated with Loudoun Hill on the basemap.  
 
 ![s_slope constraint raster](screenshots/step2_c_slope.jpg)
 
-*DESCRIPTION. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot of the slope constraint raster, displaying those areas with slopes free of this constraint alongside those with slopes steeper than 15 degrees marked in red . Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 
 The 'Raster Calculator' tool was used to add all raster layers together, to obtain a raster count for each 50 m cell. The following expression was used:
@@ -130,19 +130,19 @@ Settings:
 
 ![Raster Calculator sum expression](screenshots/step3_raster_calculator.jpg)
 
-*DESCRIPTION*.
+*Screenshot of the 'Raster Calculator' tool used to combine the constraints through raster overlay, displaying the settings including the extent, CRS and the expression*.
 
 The calculator added the number of constraints present for each cell within the study area. The output was saved as a new layer, called constraints_total. To check validity of the data, the sum of all means of the individual constraint layers was matched with the mean of constraints_total. The extent and pixel size were also checked for accuracy. The statistics list produced from constraints_total showed that the layer had 100% valid cells, which demonstrated the NoData value used worked.
 
 A unique values report was produced from constraints_total, which is displayed in the results. The layer symbology was improved for readability by using 'palette/unique values' to display each value with a distinct, identifiable colour. A map was produced using this layer to display the extent of overlapping constraints across the study area.
  
- ![constraints_total raster](screenshots_step2_constraints_total.jpg)
+![constraints_total raster](screenshots/step2_constraints_total.jpg)
 
-*DESCRIPTION. Data credits: see Data Sources and Licenses table. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot of the combined constraint raster displaying the extent of overlapping constraints across the study area. Data credits: see Data Sources and Licenses table. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
-![Unique values report for constraints_total](screenshots_step3_unique_values.jpg)
+![Unique values report for constraints_total](screenshots/step3_unique_values.jpg)
 
-*DESCRIPTION*
+*Screenshot of the unique values report, displaying the total number of pixels with their associated constraint count and area in m2*
 
 The constraint-free areas were identified using the 'Raster Calculator' tool on the constraints_total layer, with the following expression:
 
@@ -161,7 +161,7 @@ Settings:
 
 ![Polygonize settings](screenshots/step3_polygonize.jpg)
 
-*DESCRIPTION*
+*Screenshot of the 'Polygonize (Raster to Vector' tool used to convert the constraint_free raster into polygons and the settings used. *
 
 Upon inspection of the attribute table, the new layer comprised 254 features, of which 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
 
@@ -219,7 +219,7 @@ Below is a screenshot of the python script created to produce site summary stati
 
 ![site_summary.py output in the QGIS Python Console](screenshots/step4_python_analysis_final.jpg)
 
-*DESCRIPTION*
+*Screenshot of the Python script and its output in the QGIS Python Console*
 
 ## Data Sources and Licences
 
