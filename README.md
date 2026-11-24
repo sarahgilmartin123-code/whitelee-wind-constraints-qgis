@@ -48,15 +48,15 @@ Maximum proposed turbine dimensions were selected from the Whitelee Repowering S
 - Rotor radius: 86 m 
 - Tip height: 250 m
 
-Other assumptions based on the same report: 
+Other assumptions:
 - ScottishPower Generation Capacity: 1,000 MW
 - Number of turbines: 124
-- Minimum Threshold for Major Development (Hierarchy of Developments (Scotland) Regulations, 2009): 20 MW
-- Average capacity per turbine: 1,000 MW / 124 turbines = 8.06 MW (See Minimum Site Test table)
-- Turbines for major developments: 20 MW threshold / 8.06 MW = 3 (rounded up as turbines are represented as whole objects and 2 would only generate 16 MW)
+- Minimum Threshold for Major Development: 20 MW (Town and Country Planning, Hierarchy of Developments (Scotland) Regulations, 2009)
 
 
 These dimensions were chosen to reflect real-world work and decisions made from a real Scoping Report within the study area. The maximum dimensions were chosen as a cautious choice. 
+
+### 3.2. Constraint rules 
 
 | Constraint | Rule | Reason |
 |---|---|---|
@@ -184,15 +184,15 @@ The table below shows how the minimum site size was calculated.
 | Parameter | Value | Source
 |---|---|---|
 | Rotor diameter (m) | 172 | ScottishPower Renewables (2026) |
-| Spacing between rows  | 7 rotor diameters (1,204 m) | Gupta (2016, Fig.5) gives 5 to 9 rotor diameters, of which I chose the midpoint value of the range; 7 x 172 = 1,204 m. |
-| Spacing within a row | 4 rotor diameters (688 m) | Gupta (2016, Fig.5) gives 3 to 5 rotor diameters, of which I used the midpoint value of the range; 4 x 172 - 688 m. |
-| Land per Turbine (km<sup>2</sup>) | 0.83 | Calculated sum |
-| Minimum Windfarm Size: Planning Threshold for Major Development (MW) | 20 | Town and Country Pllanning (Hierarchy of Developments) (Scotland) Regulations (2009) |
+| Spacing between rows  | 7 rotor diameters (1,204 m) | Gupta (2016, Fig. 5) gives 5 to 9 rotor diameters, of which I chose the midpoint value of the range; 7 x 172 = 1,204 m. |
+| Spacing within a row | 4 rotor diameters (688 m) | Gupta (2016, Fig. 5) gives 3 to 5 rotor diameters, of which I used the midpoint value of the range; 4 x 172 = 688 m. |
+| Land per Turbine (km<sup>2</sup>) | 0.83 | Calculated: (spacing between rows (m) / spacing within a row (km2))/1000000|
+| Minimum Windfarm Size: Planning Threshold for Major Development (MW) | 20 | Town and Country Planning (Hierarchy of Developments) (Scotland) Regulations (2009) |
 | Avg. Capacity per Turbine (MW) | 8.06 | Calculated: 1,000 MW / 124 turbines (ScottishPower Renewables, 2026) |
-| No. Turbines per Site (rounded up) | 3 | Calculated sum |
-| Minimum Site Size (km<sup>2</sup>; 2dp) | 2.49 | Calculated sum |
+| No. Turbines per Site (rounded up) | 3 | Calculated:20MW threshold / 8.06 MW = 2.48, rounded up to 3 because part of a turbine cant be built and 2 would only give 16MW. |
+| Minimum Site Size (km<sup>2</sup>; 2dp) | 2.49 | Calculated: Number of turbines per site (rounded) * land per turbine (km<sup>2</sup>)|
 
-
+Values were rounded to 2 decimal places. 
 
 ### 6. Site summary statistics
 
