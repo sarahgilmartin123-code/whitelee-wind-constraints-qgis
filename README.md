@@ -205,7 +205,7 @@ Following this, Python was used to automate summary statistics for the study are
 5. Counted the number of existing turbines within constraint-free areas. This was achieved by running a 'for loop' once again, using a 'loop inside a loop', which was run through turbines in the 'turbines_study_area' layer and for polygons in 'constraint_free_areas', and used 'getFeatures()' to go through them one at a time. The conditions of the 'if statements' inside the 'for loop' included those where DN == 1 and those polygons contained a turbine. Each time a turbine was found inside a constraint-free area, the script stored a running total of the number of turbines on constraint-free land, which produced the final value. This number was then divided by the total number of existing turbines within the study area and multiplied by 100 to obtain a percentage. This value was rounded to 2 decimal places. 
 6. An 'f-string' was used to print the final values for each output inserted within a statement to improve readability of what those outputs were associated with.
 
-The script output was checked alongside other outputs, with the Python script's output of 2.63% for the percentage of constraint-free area within the study site matching the mean of the constraint-free raster, 0.0263. The number of constraint-free polygons printed from the script, 249, matched the attribute table. The output of the script can be viewed in the 'Results' section below, and the script is viewable in the 'Script' section. 
+The script output was checked alongside other outputs, with the Python script's output of 2.63% for the percentage of constraint-free area within the study site matching the mean of the constraint-free raster, 0.0263. The number of constraint-free polygons printed from the script, 254, matched the attribute table. The output of the script can be viewed in the 'Results' section below, and the script is viewable in the 'Script' section. 
 
 
 ## Results
@@ -246,14 +246,14 @@ This suggests the usable land consists of many small patches, in contrast to the
 |---|--:|
 | Total polygons in layer (constraint-free and constrained) | 254 |
 | Existing turbines in the study area | 283 |
-| Total Constraint-free land | 10.53 km² |
-| Candidate sites that are at least 2.49km² | 0 |
-| Largest area | 1.19km² |
+| Total constraint-free land | 10.53 km² |
+| Candidate sites that are at least 2.49 km² | 0 |
+| Largest constraint-free site | 1.19 km² |
 | % of the study site that is constraint-free | 2.63% |
 | Existing turbines on constraint-free land | 9 |
 | % of the turbines in the study area on constraint-free land | 3.18% | 
 
-The values were produced from site_summary.py script.
+The values were produced by the scripts/site_summary.py script, which can be run in the Python Console in QGIS.
 
 ## Maps
 1. Interactive web map 1. Extent of locational constraints at Whitelee. Link: https://arcg.is/9LvW02
