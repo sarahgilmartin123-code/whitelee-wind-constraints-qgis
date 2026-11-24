@@ -253,6 +253,8 @@ This suggests the usable land consists of many small patches, in contrast to the
 | Existing turbines on constraint-free land | 9 |
 | % of the turbines in the study area on constraint-free land | 3.18% | 
 
+The values were produced from site_summary.py script.
+
 ## Maps
 1. Interactive web map 1. Extent of locational constraints at Whitelee. Link: https://arcg.is/9LvW02
 
