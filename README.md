@@ -175,6 +175,7 @@ Following this, Python was used to automate summary statistics for the study are
 4. Quantified the perecentage of the study area that was constraint-free using the total area of those patches where DN == 0 and divided that by the study area in km2, multiplied by 100.
 5. Counted the number of existing turbines within constraint-free areas. This was achieved by running a for loop once again, which was run through turbines in the 'turbines_study_Area' layer and for polygons in 'constraint_free_areas'. The conditions of the for loop included those where DN == 1 and those polygons contained a turbine. Each time the loop was run, it stored a running total of the number of turbines on constraint-free land, which produced the final value. This number was then divided by the total number of existing turbines within the study area and multiplied by 100 to obtain a percentage. This value was converted to 2 decimal places. 
 
+The scripts output was checked alongside other outputs, with the Python scripts output of 2.63% for the percentage of constraint-free area within the study site matching the mean of the constraint free raster, 0.0263. The number of constraint-free polygons printed from the script, 249, matched the attribute table. The output of the script can be viewed in the 'Results' section below, and the script is viewable in the 'Scripts' section. 
 
 
 ## Results
