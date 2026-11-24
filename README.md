@@ -167,7 +167,23 @@ Settings:
 
 Upon inspection of the attribute table, the new layer comprised 254 features, of which 249 had a DN value of 1 and 5 features had a DN value of 0, which can be interpreted as 249 areas are constraint-free and 5 areas are constrained. Next, a map was produced using this polygon layer to display the constraint-free areas within the study area.  
 
-### 5. Site summary statistics
+### 5. Minimum Site Size
+
+The table below shows how the minimum site size was calculated. 
+
+| Parameter | Value | Source
+|---|---|---|
+| Rotor diameter (m) | 172 | ScottishPower Renewables (2026) |
+| Spacing between rows  | 7 rotor diameters | Gupta (2016, Fig.5) gives 5 to 9 rotor diameters, of which I chose the midpoint value of the range. |
+| Spacing within a row | 4 rotor diameters | Gupta (2016, Fig.5) gives 3 to 5 rotor diameters, of which I used the midpoint value of the range. |
+| Land per Turbine (km<sup>2</sup>) | 0.83 | Calculated sum |
+| Minimum Windfarm Size: Planning Threshold for Major Development (MW) | 20 | Town and Country Pllanning (Hierarchy of Developments) (Scotland) Regulations (2009) |
+| Avg. Capacity per Turbine (MW) | 8.06 | Calculated: 1,000 MW / 124 turbines (ScottishPower Renewables, 2026) |
+| No. Turbines per Site (rounded up) | 3 | Calculated sum |
+| Minimum Site Size (km<sup>2</sup>; 2dp) | 2.49 | Calculated sum |
+
+
+### 6. Site summary statistics
 
 Following this, Python was used to automate summary statistics for the study area, allowing it to be re-run efficiently if anything needed to be changed. The script was run in the Python Console in QGIS (PyQGIS) and two layers were used: the polygonised constraint-free areas layer ('constraint_free_areas') and the clipped OSM turbines layer (turbines_study_area). The script file was saved [site_summary.py](scripts/site_summary.py). 
 
