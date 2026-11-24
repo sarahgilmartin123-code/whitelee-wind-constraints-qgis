@@ -240,6 +240,19 @@ Next, the number of cells at each score was counted using the Raster layer uniqu
 
 This suggests the usable land consists of many small patches, in contrast to the unusable land. 
 
+### Site Summary (PyQGIS output)
+
+| Measure | Value |
+|---|--:|
+|[Total no. polygons in layer] | [254 ] |
+|[Existing turbines in the study area] | [283] |
+|[Total Constraint-free land] | [10.53 km²] |
+|[Candidate sites that are >=2.49km²] | [0] |
+|[Largest area] | [1.19km²] |
+|[% of the study site that is constraint-free] | [2.63%] |
+| [Existing turbines on constraint-free land] | [9] |
+|[% of the turbines in the study area on constraint-free land] | [3.18%] | 
+
 ## Maps
 1. Interactive web map 1. Extent of locational constraints at Whitelee. Link: https://arcg.is/9LvW02
 
