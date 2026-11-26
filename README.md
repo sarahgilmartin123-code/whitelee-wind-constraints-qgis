@@ -1,6 +1,6 @@
 # whitelee-wind-constraints-qgis
 
-Constraint mapping for onshore wind at Whitelee, south of Glasgow. Used QGIS to identify constraint-free land and calculated summary statistics using PyQGIS. 
+Constraint mapping for onshore wind at Whitelee, south of Glasgow. Used QGIS to identify constraint-free land and calculated summary statistics using PyQGIS and Excel. This is a simplified, independent study, not a real planning assessment, and has no affiliation with organisations whose data I used. 
 ## Background
 The Scottish Government's ambition for installed capacity of onshore wind in Scotland has been set to at least 20 GW by 2030 (Scottish Government, 2022). This was set out in the Onshore Wind Policy Statement 2022, which also stressed the importance of developments that preserve the natural environment. Locational constraint mapping can be used to address both of these ambitions. 
 ## Aim
@@ -330,3 +330,4 @@ Transport Scotland (2013). Consultation on East Lothian Guidance for wind farms 
 Welsh Assembly Government (2005). Planning Policy Wales: Technical Advice Note 8: Planning for Renewable Energy. Cardiff: Welsh Assembly Government. Available at: https://www.gov.wales/sites/default/files/publications/2018-09/tan8-renewable-energy_0.pdf  (Accessed: 23rd October 2026).
 
 ## AI Use (Fair-Use Statement)
+Claude (Anthropic) was used as a tutor to assist in carrying out my project under fair-use rules I set, helping with explanations of concepts, hints and short examples for code and issue diagnosis; I carried out all the work in QGIS by myself, made my own decisions and produced my own code, results and write-up. 
