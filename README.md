@@ -1,5 +1,4 @@
 # whitelee-wind-constraints-qgis
-(Write up in progress)
 
 Constraint mapping for onshore wind at Whitelee, south of Glasgow. Used QGIS to identify constraint-free land and calculated summary statistics using PyQGIS. 
 ## Background
@@ -267,6 +266,7 @@ This is a simplified, independent project, not a real planning or site assessmen
 - Surface water buffer: A 50 m water buffer was used, based on recommendations by SEPA for an SP Energy Networks overhead line project (SP Energy Networks, 2023a). However, the project's final design used a 10 m buffer because the number of small watercourses and drains meant that the larger buffer wasn't able to be met, due to spacing requirements between towers (SP Energy Networks, 2023b). Therefore, the 50 m buffer likely excludes more land than a real-world project would use.
 - Building buffer: Since OpenMap Local did not give information on building use, all entries were treated equally and given the same buffer. Therefore, land that was usable may have been omitted as a result of the cautious approach. This could be improved by use of data that records building use, to exclude homes without a noise buffer.
 - OS Terrain 50 dataset: The dataset will give a more generalised view of the terrain as its designed to work with more small-scale products (Ordnance Survey, 2013). This could result in some areas that are steeper than 15 degrees being identified as meeting the slope threshold. Steep sloped terrain such as Loudoun Hill was identified, however, smaller steep slopes could have been missed.
+- 
   
 ## Script
 
