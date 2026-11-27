@@ -37,11 +37,11 @@ The table below displays the datasets used and how each was prepared.
 
 ![Clipped datasets in QGIS](screenshots/step1_clipped_data.jpg)
 
-*Screenshot displaying the newly clipped constraint layers alongside the study area, its 1 km buffer and the OSM basemap layers.Data credits: see Data Sources and Licences table.Contains OS data © Crown copyright and database right 2026.Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot displaying the newly clipped constraint layers alongside the study area, its 1 km buffer and the OSM basemap layers. Data credits: see Data Sources and Licences table. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ### 3. Constraint criteria
 
-### 3.1. Turbine Assumptions 
+#### 3.1. Turbine Assumptions 
 Maximum proposed turbine dimensions were selected from the Whitelee Repowering Scoping Report (ScottishPower Renewables, 2026).
 - Hub height: 164 m
 - Rotor radius: 86 m 
@@ -55,7 +55,7 @@ Other assumptions:
 
 These dimensions were chosen to reflect real-world work and decisions made from a real Scoping Report within the study area. The maximum dimensions were chosen as a cautious choice. 
 
-### 3.2. Constraint rules 
+#### 3.2. Constraint rules 
 
 | Constraint | Rule | Reason |
 |---|---|---|
@@ -99,7 +99,7 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 
 ![c_buildings constraint raster](screenshots/step2_c_buildings.jpg)
 
-*Screenshot of the buildings constraint raster, showing areas free of this constraint alongside area with 500 m of a building. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
+*Screenshot of the buildings constraint raster, showing areas free of this constraint and areas within 500 m of a building. Contains OS data © Crown copyright and database right 2026. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 ![c_woodland constraint raster](screenshots/step2_c_woodland.jpg)
 
@@ -122,7 +122,7 @@ Type was chosen in line with all other raster types, to avoid issues when layers
 *Screenshot of the protected areas constraint raster, showing those free of protected areas alongside those that contain a protected area. Protected Areas: SSSIs, SPAs, SACs (Copyright Scottish Natural Heritage). Contains OS data © Crown copyright and database right (2022, 2023). Available under the Open Government Licence v3.0. Basemap © OpenStreetMap contributors, openstreetmap.org/copyright.*
 
 
-Following this, the merged DTM layer was used to obtain slope values using the 'Slope' tool. The Z factor was set to 1 as both the height and horizontal units (EPSG:27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes ≤ 15° = 0, which was outputted to create a new layer, c_slope. When the new slope layer was compared with the OSM basemap, a small white patch that corresponds to a steep sloped area was identifiable on the slope layer, which correlated with Loudoun Hill on the basemap.  
+Following this, the merged DTM layer was used to obtain slope values using the 'Slope' tool. The Z factor was set to 1 as both the height and horizontal units (EPSG:27700) were in metres. The 'Raster Calculator' tool was used to group slope values: slope values > 15° = 1; slopes ≤ 15° = 0, which was outputted to create a new layer, c_slope. When the new slope layer was compared with the OSM basemap, a small red patch that corresponds to a steep sloped area was identifiable on the slope layer, which correlated with Loudoun Hill on the basemap.  
 
 ![c_slope constraint raster](screenshots/step2_c_slope.jpg)
 
@@ -255,9 +255,23 @@ This suggests the usable land consists of many small patches, in contrast to the
 The values were produced by the [site_summary.py](scripts/site_summary.py) script, which can be run in the Python Console in QGIS.
 
 ## Maps
+
+ 
+
+![Constraint count map](maps/map1_constraint_count.png)
+
+*Map displaying the constraint count across the study area from 0 (constraint-free) to 5 (5 constraints). Number of overlapping constraints: Derived from: Derived from: OS OpenMap Local, OS Open Roads and OS Terrain 50: Contains OS data © Crown copyright and database right 2026 (OS OpenData). NatureScot (SNH) SSSIs and SPAs: Copyright Scottish Natural Heritage. Contains Ordnance Survey data © Crown copyright and database right (2022, 2023). Available under the Open Government Licence v3.0. Carbon and Peatland 2016 map, © SNH and JHI. Map produced by SNH using data from the James Hutton Institute, used with permission, all rights reserved. Non-Commercial Government Licence, v2.0.*
+
+![Constriant-free areas and existing turbines](maps/map2_map2_constraint_free_turbines.png)
+
+*Map displayed the constraint-free land amongst existing turbines within the study area. Existing turbines: © OpenStreetMap contributors, openstreetmap.org/copyright. Constraint-free areas: Derived from: OS OpenMap Local, OS Open Roads and OS Terrain 50: Contains OS data © Crown copyright and database right 2026 (OS OpenData). NatureScot (SNH) SSSIs and SPAs: Copyright Scottish Natural Heritage. Contains Ordnance Survey data © Crown copyright and database right (2022, 2023). Available under the Open Government Licence v3.0. Carbon and Peatland 2016 map, © SNH and JHI. Map produced by SNH using data from the James Hutton Institute, used with permission, all rights reserved. Non-Commercial Government Licence, v2.0.
+
+
 1. Interactive web map 1. Extent of locational constraints at Whitelee. Link: https://arcg.is/9LvW02
 
 2. Interactive web map 2. Whitelee constraint-free areas and existing turbines. Link:  https://arcg.is/0HnDqH2
+
+
 
 ## Limitations
 This is a simplified, independent project, not a real planning or site assessment. 
@@ -265,7 +279,7 @@ This is a simplified, independent project, not a real planning or site assessmen
 - Woodland buffer: NatureScot recommended a 50 m clearance between blade tip and woodland, using a formula that included hub height, blade length and tree height (NatureScot, 2021). Instead, I measured it horizontally, adding the 50 m to the 86 m rotor radius, excluding hub and tree height. As a result, it is likely that my buffer is larger than the formula would have produced, therefore excluding usable land. This choice was made to keep the project straightforward and approach with caution.
 - Surface water buffer: A 50 m water buffer was used, based on recommendations by SEPA for an SP Energy Networks overhead line project (SP Energy Networks, 2023a). However, the project's final design used a 10 m buffer because the number of small watercourses and drains meant that the larger buffer wasn't able to be met, due to spacing requirements between towers (SP Energy Networks, 2023b). Therefore, the 50 m buffer likely excludes more land than a real-world project would use.
 - Building buffer: Since OpenMap Local did not give information on building use, all entries were treated equally and given the same buffer. Therefore, land that was usable may have been omitted as a result of the cautious approach. This could be improved by use of data that records building use, to exclude homes without a noise buffer.
-- OS Terrain 50 dataset: The dataset will give a more generalised view of the terrain as its designed to work with more small-scale products (Ordnance Survey, 2013). This could result in some areas that are steeper than 15 degrees being identified as meeting the slope threshold. Steep sloped terrain such as Loudoun Hill was identified, however, smaller steep slopes could have been missed.
+- OS Terrain 50 dataset: The dataset will give a more generalised view of the terrain as it's designed to work with more small-scale products (Ordnance Survey, 2013). This could result in some areas that are steeper than 15 degrees being identified as meeting the slope threshold. Steep sloped terrain such as Loudoun Hill was identified, however, smaller steep slopes could have been missed.
 - It is worth mentioning that constraint-free land does not guarantee the land is suitable for development, as other constraints such as wind speed and flow have not been investigated. 
   
 ## Script
