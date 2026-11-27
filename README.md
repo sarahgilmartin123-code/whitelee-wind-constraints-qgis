@@ -1,5 +1,5 @@
 # Constraint mapping for onshore wind at Whitelee, south of Glasgow
-(write-up in progress_
+(write-up in progress)
 
 Constraint mapping for onshore wind at Whitelee, south of Glasgow. Used QGIS to identify constraint-free land and calculated summary statistics using PyQGIS and Excel. This is a simplified, independent study, not a real planning assessment, and has no affiliation with organisations whose data I used. 
 ## Background
