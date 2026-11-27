@@ -272,6 +272,9 @@ The values were produced by the [site_summary.py](scripts/site_summary.py) scrip
 
 2. Interactive web map 2. Whitelee constraint-free areas and existing turbines. Link:  https://arcg.is/0HnDqH2
 
+## Discussion
+
+## Conclusion
 
 
 ## Limitations
