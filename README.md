@@ -1,4 +1,5 @@
-# whitelee-wind-constraints-qgis
+# Constraint mapping for onshore wind at Whitelee, south of Glasgow
+(write-up in progress_
 
 Constraint mapping for onshore wind at Whitelee, south of Glasgow. Used QGIS to identify constraint-free land and calculated summary statistics using PyQGIS and Excel. This is a simplified, independent study, not a real planning assessment, and has no affiliation with organisations whose data I used. 
 ## Background
@@ -195,7 +196,7 @@ Values were rounded to 2 decimal places.
 
 ### 6. Site summary statistics
 
-Following this, Python was used to automate summary statistics for the study area, allowing it to be re-run efficiently if anything needed to be changed. The script was run in the Python Console in QGIS (PyQGIS) and two layers were used: the polygonised constraint-free areas layer ('constraint_free_areas') and the clipped OSM turbines layer (turbines_study_area). The script file was saved [site_summary.py](scripts/site_summary.py). 
+Following this, Python was used to automate summary statistics for the study area, allowing it to be re-run efficiently if anything needed to be changed. The script was run in the Python Console in QGIS (PyQGIS) and two layers were used: the polygonised constraint-free areas layer ('constraint_free_areas') and the clipped OSM turbines layer (turbines_study_area). The script file was saved as [site_summary.py](scripts/site_summary.py). 
 
 1. Two fixed values were used, the area of the study area in km<sup>2</sup>, and the 2.49 km<sup>2</sup> minimum site size, which were both stored as 'variables' in the script.
 2. The script counted the number of polygons in the 'constraint_free_areas' layer and counted the number of existing turbines in 'turbines_study_area' using their feature count from the 'featureCount()' function in PyQGIS.
@@ -223,8 +224,8 @@ Statistics for each constraint raster layer are displayed in the table below.
 | Total |  |  |  |  | 2.1097 | |  |
 | Combined Raster Count |  | 0 | 5 | 100 | 2.1097 (SD 0.97) | | |
 
-Next, the number of cells at each score was counted using the Raster layer unique values report. The table below displays the distribution of cells across the number of constraints (0 to 5) per cell.
-
+Note: Differences are due to rounding.
+Next, the number of cells at each score was counted using the Raster layer unique values report. The table below displays the distribution of cells across the number of constraints (0 to 5) per cell. 
 
 
 | Value | Cell count | m<sup>2</sup> | km<sup>2</sup> | % of study area |
@@ -309,11 +310,11 @@ Raw data is not included in the repository and can be downloaded from each provi
 
 Gupta, N. (2016). 'A review on the inclusion of wind generation in power system studies'. *Renewable and Sustainable Energy Reviews, 59, pp.530-543.* 
 
-Ordnance Survey (2013). OS terrain 50 user guide, version 1.0. Available at: https://digimap.edina.ac.uk/help/files/resource-hub/downloads/osmanuals/os-terrain-50-user-guide_v1.0.pdf (Accessed: 20th November 2026).
-
 NatureScot (2021). Bats and onshore wind turbines: survey assessment and mitigation. Available at: https://www.nature.scot/bats-and-onshore-wind-turbines-survey-assessment-and-mitigation#7.1.2%C2%A0+Buffers-01 (Accessed: 23rd October 2026).
 
 NatureScot (2026). Advising on peatland habitats and carbon-rich soils in development management. Available at: https://www.nature.scot/doc/advising-peatland-habitats-and-carbon-rich-soils-development-management (Accessed: 23rd October 2026).
+
+Ordnance Survey (2013). OS terrain 50 user guide, version 1.0. Available at: https://digimap.edina.ac.uk/help/files/resource-hub/downloads/osmanuals/os-terrain-50-user-guide_v1.0.pdf (Accessed: 20th November 2026).
 
 Rutland County Council (2012). Wind Turbine Developments: Supplementary Planning Document. Oakham: Rutland County Council. Adopted 12/11/2012. Available at: https://www.rutland.gov.uk/sites/default/files/2022-12/Wind%20Turbines%20SPD%20%282012%29.pdf (Accessed: 23rd October 2026).
 
